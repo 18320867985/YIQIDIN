@@ -1,0 +1,21 @@
+//通过选择器继承继承样式
+.error {
+  border: 1px red;
+  background-color: #fdd;
+}
+.seriousError {
+  @extend .error;
+  border-width: 3px;
+}
+
+// 
+$coclos:red,blue ,green;
+$namespace:mui;
+
+.h1{
+    color: nth($coclos,3);
+    
+}
+.#{$namespace}{
+    color:nth($coclos,1);
+}

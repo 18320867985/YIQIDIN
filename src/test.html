@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/all.css"/>
+		<style type="text/css">
+			body{padding: 100px;}
+			  .a{
+			  	background: red;
+			  	width: 900px;
+			  	height: 100%;
+			  	
+			  	border:  2px solid blue;
+			  }
+			  
+			  .tooltip{
+			  	position: relative;
+			  	width: 200px;
+			  	padding: 10px;
+			  	border-radius: 5px;
+			  	background: #333;
+			  	color:#fff;
+			 
+			  	
+			  }
+			 .tooltip-ttl{
+			 	position: absolute;
+			 	top: -5px;
+			 	width: 10px ;
+				height: 10px;	
+				margin-left: 5px;
+				background: #333;
+				transform: rotate(45deg);
+						 	
+			 }
+		</style>
+		
+		
+	</head>
+
+	<body>
+		<h1>test</h1>
+		<pre><code class="hljs php"><span class="hljs-variable">$highlight</span>-color: <span class="hljs-comment">#F90;</span>
+<span class="hljs-variable">$highlight</span>-border: <span class="hljs-number">1</span>px solid <span class="hljs-variable">$highlight</span>-color;
+.selected {
+  border: <span class="hljs-variable">$highlight</span>-border;
+}
+
+<span class="hljs-comment">//编译后</span>
+
+.selected {
+  border: <span class="hljs-number">1</span>px solid <span class="hljs-comment">#F90;</span>
+}
+</code></pre>
+		 
+		 <div  class="tooltip">
+		 	<div class="tooltip-ttl"></div>
+		 	tooltip
+		 </div>
+		
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+		<!--[if lte IE 8]>
+			<script src="js/respond.min.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+		
+		<script type="text/javascript">
+			
+			function ff(event){
+				
+				event.preventDefault();
+				return false;
+			}
+			
+		</script>
+	</body>
+
+</html>
