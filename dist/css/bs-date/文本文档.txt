@@ -1,7 +1,0 @@
- $('.datetimepicker').datetimepicker({
-
-                format: "yyyy-mm-dd hh:ii ",
-                showMeridian: true,
-                autoclose: true,
-                todayBtn: true
-            });

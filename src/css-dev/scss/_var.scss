@@ -1,5 +1,25 @@
 /*var*/
 
+$text-df:#777;  // 默认字体
+
+$text-danger:rgb(222,48,50);   // 主调字体
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8,5 +28,57 @@
 //=================下面编写scss页面代码======================
 
 
+/*header*/
 
+/*头部的顶部top*/
 
+.header-top{
+    
+    padding:  10px 0;
+    
+    // 下面横线
+    border: 1px solid #ddd;
+    
+    // a 链接
+    
+    a{
+        
+        color:$text-df;
+        font-size: 12px;
+    }
+    .l1{
+        
+        margin-left: 10px;
+    }
+    
+    // line
+    .line{
+        padding: 0 5px;
+        color:$text-df;
+    }
+  
+    
+    
+}
+
+// header-logo  logo search  cart
+.header-logo{
+    
+    height: 150px;
+    background: #f8f8f8;
+    // logo
+    .logo{
+        
+        width: 200px;
+    }
+    
+    // search
+    .search{
+        
+    }
+    
+    //cart
+    .cart{
+        width: 200px;
+    }
+}

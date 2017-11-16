@@ -5,37 +5,42 @@
 		<meta charset="UTF-8">
 		<title></title>
 		
+
 		<link rel="stylesheet" type="text/css" href="css/all.css"/>
 		<style type="text/css">
-			body{padding: 100px;}
-			  .a{
-			  	background: red;
-			  	width: 900px;
-			  	height: 100%;
-			  	
-			  	border:  2px solid blue;
-			  }
-			  
-			  .tooltip{
-			  	position: relative;
-			  	width: 200px;
-			  	padding: 10px;
-			  	border-radius: 5px;
-			  	background: #333;
-			  	color:#fff;
-			 
-			  	
-			  }
-			 .tooltip-ttl{
-			 	position: absolute;
-			 	top: -5px;
-			 	width: 10px ;
-				height: 10px;	
-				margin-left: 5px;
-				background: #333;
-				transform: rotate(45deg);
-						 	
-			 }
+			
+			
+			
+			.select-list a{
+				 padding: 3px 10px;
+				 color:#777;
+				 font-size: 14px;
+				 border: 1px solid #ddd;
+				  border-radius: 5px;
+			} 
+			
+			.select-list a+a{
+				margin-left: 10px;
+			} 
+			
+			/*选择的样式*/
+			.select-list a.active{
+			
+				 color:green;
+				 border: 1px solid green;
+				
+			} 
+			
+			p:last-of-type{
+				color:red;
+			}
+			
+			p:target{
+				color:red;
+				font-size: 36px;
+				border: 1px solid red;;
+			}
+			
 		</style>
 		
 		
@@ -43,10 +48,35 @@
 
 	<body>
 		<h1>test</h1>
+		<span class=" icon icon-spinner icon-spin icon-2x text-primary" ></span>
 	
-		 <div  class="tooltip">
-		 	<div class="tooltip-ttl"></div>
-		 	tooltip
+		
+		 <div class="select-list">
+		 	
+		 	<a href="javascript:;"> 商品1</a>
+		 	<a href="javascript:;"> 商品2</a>
+		 	<a href="javascript:;"> 商品3</a>
+		 	
+		 </div>
+		 
+		 <a href="#a">a</a>
+		 <a href="#a2">a</a>
+		 <p id="a">22423423</p>
+		 	 <p id="a2">22423423</p>
+		 <div class="list">
+		 	<p>1</p>
+		 	<p>2</p>
+		 	<h3>2342</h3>
+		 	<p>3</p>
+		 	
+		 </div>
+		  
+		 <div class="list">
+		 	
+		 	<p>1222</p>
+		 	
+		 	
+		 	
 		 </div>
 		
 		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
@@ -57,11 +87,19 @@
 		
 		<script type="text/javascript">
 			
-			function ff(event){
+			$(function(){
 				
-				event.preventDefault();
-				return false;
-			}
+				$(".select-list  a").click(function(){
+					
+					if($(this).attr("data-bl")){
+						$(this).removeAttr("data-bl").removeClass("active");
+					}else{
+						$(this).attr("data-bl","1").addClass("active");
+					}
+					
+				});
+			});
+			
 			
 		</script>
 	</body>

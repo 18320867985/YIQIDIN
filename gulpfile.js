@@ -69,17 +69,19 @@ var paths = {
 
 		"src/js-dev/libs/prefix-css3.min.js", // pc端 自动补全css3前缀 
 		
-		"src/js-dev/libs/modernizr/modernizr-2.6.2.min.js",  // modernizr  检测css3和h5
+		//"src/js-dev/libs/modernizr/modernizr-2.6.2.min.js",  // modernizr  检测css3和h5
 		
 		"src/js-dev/libs/jq/jquery-1.11.0.min.js",  // jquery.js
 		
-		"src/js-dev/libs/jq/jquery-drag.min.js",	// 拖动元素
+		//"src/js-dev/libs/jq/jquery-drag.min.js",	// 拖动元素
 		
-		"src/js-dev/libs/jq/jquery.touchSwipe.min.js",	//jquery.touchSwipe.min.js 
+		//"src/js-dev/libs/jq/jquery.touchSwipe.min.js",	//jquery.touchSwipe.min.js 
 		
 		"src/js-dev/libs/vd/vd.js",  //数据验证
 		
-		"src/js-dev/libs/bs/bootstrap.js",  // bootstrap.js
+		//"src/js-dev/libs/bs-3/bootstrap.js",  // bootstrap.js 3.0
+		
+		"src/js-dev/libs/bs-4/bootstrap.js",  // bootstrap.js 4.0
 		
 		//"src/js-dev/libs/ie/respond.js",  // 兼容ie8 响应式
 		
@@ -157,9 +159,9 @@ gulp.task('release', ['concat'], function() {
 	//.pipe(img())                     // 压缩图片
 	.pipe(gulp.dest('./dist/images/')); //复制img
 	
-	gulp.src('./src/en/**/*.*').pipe(gulp.dest('./dist/en/')); //复制 en
+//	gulp.src('./src/en/**/*.*').pipe(gulp.dest('./dist/en/')); //复制 en
 	
-	gulp.src('./src/video/**/*.*').pipe(gulp.dest('./dist/video/')); //复制 video 视频
+//	gulp.src('./src/video/**/*.*').pipe(gulp.dest('./dist/video/')); //复制 video 视频
 	gulp.src('./src/json/**/*.*').pipe(gulp.dest('./dist/json/')); //复制 json
 
 });
@@ -290,7 +292,7 @@ gulp.task("watch", ['connect'], function() {
 	gulp.watch(paths.jsPath, ["t_minjs"]);
 
 	//less合并压缩css文件
-	gulp.watch(paths.lessPath, ['t_mincss']);
+	//gulp.watch(paths.lessPath, ['t_mincss']);
 
 	//sass合并压缩css文件
 	gulp.watch(paths.scssPath, ['t_minscss']);
