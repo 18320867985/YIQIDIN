@@ -2,6 +2,12 @@
 /*默认样式*/
 
 
+body{
+    font-size:12px ;
+    font-family: "微软雅黑","宋体";
+    
+    background: #f8f8f8;
+}
 
 
 .container-12 {
@@ -34,6 +40,8 @@
 .container{
     min-width: 300px;
 }
+
+
 
 /*ie8*/
 
@@ -389,31 +397,27 @@ select option {
     outline: none !important;
 }
 
-//placeholder
-
+/****placeholder****/
 /*webkit*/
-
 input::-webkit-input-placeholder {
   
+  color:$text-placeholder;
 }
 
 
 /*IE10+*/
-
 input:-ms-input-placeholder {
-   
+     color:$text-placeholder;
 }
 
 /*Firefox4-18*/
-
 input:-moz-placeholder {
-    
+      color:$text-placeholder;
 }
-
 
 /*Firefox19+*/
 input::-moz-placeholder {
-  
+   color:$text-placeholder; 
 }
 
 

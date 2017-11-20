@@ -1,84 +1,226 @@
 /*var*/
 
-$text-df:#777;  // 默认字体
-
-$text-danger:rgb(222,48,50);   // 主调字体
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$text-df: rgb(70, 70, 70); // 默认字体
+$text-ash: rgba(70, 70, 70, 0.9);
+$text-ash-2: #aab2bd;
+$text-ash-3: #e6e9ed;
+$text-placeholder:rgb(170, 178, 189);
+$text-white:#fff;
+$text-danger:rgb(222, 48, 50); // 主调字体
 
 
 //=================下面编写scss页面代码======================
 
+/*index*/
 
-/*header*/
+.index{
+    
 
-/*头部的顶部top*/
+    
+}
+.index-menu {
+        background: $text-white;
+    .index-ttl {
+        position: relative;
+        width: 200px;
+        height: 48px;
+        line-height: 48px;
+        background: $text-danger;
+        color: $text-white;
+        h4 {
+            padding: 0 !important;
+            width: 160px;
+            height: 48px;
+            line-height: 48px;
+            font-size: 16px;
+            text-align: center;
+        }
+        // icon
+        .icon {
+            position: absolute;
+            top: 9px;
+            right: 24px;
+            z-index: 2;
+            color: #f0f0f0;
+            font-size: 24px;
+            font-weight: 100;
+        }
+    }
+}
 
-.header-top{
+.index .container-12 {
+     background: $text-white;
     
-    padding:  10px 0;
+}
+// 轮播图
+.index-lbt {
+    width: 920px;
+    box-sizing: border-box;
+  background: $text-white;
+}
+
+// 公告
+.index-notice {
+    width: 230px;
+    height: 400px;
+    box-sizing: border-box;
+     background: $text-white;
+    // 标题
+    .notice-ttl {
+        height: 38px;
+        line-height: 38px;
+        padding-right: 10px;
+        font-size: 16px;
+        color: rgb(50, 50, 50);
+        border: 1px solid #ddd;
+        a {
+            font-size: 14px;
+            color: rgb(50, 50, 50);
+        }
+    }
     
-    // 下面横线
-    border: 1px solid #ddd;
+    // 列表
+    ul {
+   
+        border: 1px solid #ddd;
+        border-top: none;
+        padding: 10px 10px;
+        li {
+            a {
+                display: block;
+                width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                padding-left: 10px;
+                color: rgb(69, 69, 69);
+            }
+            &+li {
+                margin-top: 10px;
+            }
+        }
+    }
     
-    // a 链接
+    // seting 小图标
+    .table {
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        text-align: center;
+        // icon
+        tr td {
+            padding: 12px;
+            
+            a{
+                color:$text-df;
+            }
+       
+            img {
+                width: 26px;
+                height: 26px;
+            }
+            h5 {
+                margin-top: 10px;
+                width: 100%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+
+
+/*-选好货区*/ 
+
+.index-discount{
     
-    a{
-        
+    padding-top: 60px;
+    
+    // 标题
+    h4{
+        padding-left: 15px;
+        margin-bottom: 15px;
         color:$text-df;
-        font-size: 12px;
-    }
-    .l1{
-        
-        margin-left: 10px;
+        border-left:  2px solid $text-danger ;
     }
     
-    // line
-    .line{
-        padding: 0 5px;
-        color:$text-df;
-    }
-  
+    // 大图
+    
+    .index-discount-br{
+        
+        border: 1px solid  $text-ash-3;
+        box-sizing: border-box;
+        
+           }
+    .big-img{
+         width: 250px;
+         padding: 10px;
+         
+         img{
+             
+             width:240px;
+             height: 290px;
+             
+         }
+    } 
+    
+    
+    //select-list
+     .select-list{
+          
+           
+          // 标题 
+          
+          ul {
+              li{
+                  float: left;
+                  border: 1px solid $text-ash-3;
+                  border-top:  none;
+                  
+                  
+                  &+li{
+                      border-left: none ;
+                  }
+                  
+                  &:last-child{
+                      border-right: none ;
+                  }
+                  
+                  
+                  a{
+                       display: block;
+                       padding: 0;
+                       width: 150px;
+                       height: 44px;
+                       line-height: 44px;
+                       text-align: center;
+                       font-size: 14px;
+                       
+                       transition:  all  .5s;
+                       
+                  }
+                  
+                  // select style in active
+                  
+                  &.active a{
+                      
+                      background: $text-danger;
+                      color:$text-white;
+                       
+                        &:hover{
+                            color:$text-white !important;
+                        }
+                  }
+                  
+              }
+          }
+           
+           
+      }
     
     
 }
 
-// header-logo  logo search  cart
-.header-logo{
-    
-    height: 150px;
-    background: #f8f8f8;
-    // logo
-    .logo{
-        
-        width: 200px;
-    }
-    
-    // search
-    .search{
-        
-    }
-    
-    //cart
-    .cart{
-        width: 200px;
-    }
-}
+

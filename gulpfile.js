@@ -79,9 +79,9 @@ var paths = {
 		
 		"src/js-dev/libs/vd/vd.js",  //数据验证
 		
-		//"src/js-dev/libs/bs-3/bootstrap.js",  // bootstrap.js 3.0
+		"src/js-dev/libs/bs-3/bootstrap.js",  // bootstrap.js 3.0
 		
-		"src/js-dev/libs/bs-4/bootstrap.js",  // bootstrap.js 4.0
+		//"src/js-dev/libs/bs-4/bootstrap.js",  // bootstrap.js 4.0
 		
 		//"src/js-dev/libs/ie/respond.js",  // 兼容ie8 响应式
 		

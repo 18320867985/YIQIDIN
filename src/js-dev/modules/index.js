@@ -1,45 +1,37 @@
-var index = (function() {
+var index = (function($) {
 
+	/* 首页图片轮播*/
+	function _lbt(){
 	
-	
-	function lbt(){
+			$(".index-cont-lbt-big").hover(function() {
+				$(this).find(".prev,.next").fadeTo("show", 0.5);
+			}, function() {
+				$(this).find(".prev,.next").hide();
+			})
 		
-		// 轮播图		
-		setCarouselLfBtn();
-
-		$(window).resize(function() {
-			setCarouselLfBtn();
-		});
-
-		function setCarouselLfBtn() {
-			if($(window).width() > 767) {
-				$(' .carousel.slide ').mouseenter(function() {
-
-					$(this).find('.left.carousel-control,.right.carousel-control').stop().show();
-
-				});
-
-				$(' .carousel.slide').mouseleave(function() {
-
-					$(this).find('.left.carousel-control,.right.carousel-control').stop().hide();
-				});
-			}else{
+			$(".prev,.next").hover(function() {
 				
-				$('.carousel.slide').find('.left.carousel-control,.right.carousel-control').hide();
-			}
-		}
-		
-		
+				$(this).fadeTo("show", 0.7);
+			}, function() {
+				$(this).fadeTo("show", 0.1);
+			})
+			$(".index-cont-lbt-big").slide({
+				titCell: ".num ul",
+				mainCell: ".lbt-items",
+				effect: "fold",
+				autoPlay: true,
+				delayTime: 700,
+				autoPage: true,
+				interval:3000
+				
+			});
+	
 	}
-
+	
+	
+	
 	return {
-
-		init: function() {
-			
-			lbt(); //轮播图
-			
-		
-		}
+		lbt:_lbt
 	}
-
-})();
+		
+})(window.jQuery);

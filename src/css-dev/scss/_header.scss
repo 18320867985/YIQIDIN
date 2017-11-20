@@ -1,2 +1,127 @@
 
 /*header*/
+
+
+/*头部的顶部top*/
+
+.header-top {
+    padding: 6px 0;
+    background: $text-white;
+   
+    // 下面横线
+    border: 1px solid #ddd;
+    // a 链接
+    a {
+        color: $text-ash;
+        font-size: 12px;
+         
+    }
+    .l1 {
+        margin-left: 10px;
+    }
+    // line
+    .line {
+        padding: 0 5px;
+        color: $text-df;
+    }
+}
+
+// header-logo  logo search  cart
+.header-logo {
+    $h: 100px; // 高度
+    height: $h;
+    
+      background: $text-white;
+   
+    // logo
+    .logo {
+        // logo 页
+        width: 200px;
+        height: $h;
+        line-height: $h;
+        text-align: center;
+        font-size: 24px;
+    }
+    // search
+    .search {
+        // 搜索页
+        width: 800px;
+        height: $h;
+        padding-top: 30px;
+        padding-left: 100px;
+        //  background: gray;
+        // 搜索框
+        $search-h: 40px; // height
+        .txt {
+            display: block;
+            float: left;
+            margin: 0;
+            width: 500px;
+            height: $search-h;
+            padding: 6px 12px;
+            border: 2px solid $text-danger;
+        }
+        .sbtn {
+            display: block;
+            float: left;
+            padding: 0;
+            margin: 0;
+            width: 100px;
+            height: $search-h;
+            line-height: $search-h;
+            text-align: center;
+            color: $text-white;
+            font-size: 14px;
+            border-radius: 0;
+            border: none;
+            background: $text-danger;
+            outline: none;
+            &:hover {
+                background: darken($text-danger, 5%);
+            }
+        }
+        // 下面关键子
+        .bottom-link {
+            font-size: 12px;
+            padding-top: 3px;
+            padding-left: 5px;
+            clear: both;
+         
+         
+           
+           span {
+                
+                margin-right: 5px;
+                color: rgb(153,153,153);
+            }
+            a{
+                color: rgb(153,153,153);
+                
+                 &+a {
+                margin-left: 5px;
+            }
+            }
+           
+        }
+    }
+    //cart
+    .cart {
+        // 购物车 页
+        width: 170px;
+        height: $h;
+        padding-top: 30px;
+        font-size: 14px;
+        //icon
+        .icon {
+            font-size: 30px;
+            color: $text-danger;
+            margin-bottom: 10px;
+        }
+        a {
+            color: red;
+            &:hover {
+                color: darken($text-danger, 5%);
+            }
+        }
+    }
+}

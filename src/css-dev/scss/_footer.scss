@@ -1,2 +1,116 @@
 
 /*footer*/
+
+.index-ft{
+    
+    background: $text-white;
+}
+/*页脚标志图片*/
+.index-ft-band{
+    
+    margin-top: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+    // item
+    .item{
+        position: relative;
+     
+     img{
+         margin-left: 60px;
+         width: 70px;
+         height: 70px;
+         
+     }
+        .desc{
+            
+            position: relative;
+             top: 20px;
+             margin-left: 10px;
+             
+             h4{
+                 
+                 margin-bottom: 5px;
+                 font-size: 16px;
+             }
+             p{
+                 color: darken($text-ash,10%);
+             }
+        }
+        
+    }
+    
+}
+
+
+/*页脚列表*/
+
+.index-ft-list {
+    
+  
+  padding-top: 100px;
+    
+    dl{
+        float: left;
+        width: 20%;
+        text-align: center;
+        
+        dt{
+            margin-bottom: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        dd{
+            margin-top: 5px;
+            text-align: left;
+            margin-left: 90px;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            a{
+                 color:$text-ash ;
+                 font-size: 12px;
+                 
+                 &:hover{
+                     color:$text-danger;
+                 }
+            }
+           
+        }
+        
+    }
+}
+
+
+// 版权 com-footer
+.com-footer{
+    
+      padding: 15px 0;
+      
+    ul{
+        margin: 15px 0;
+      
+        text-align: center;
+        li{
+            float: left;
+             display: inline-block;
+              float: none;
+              
+              a{
+                  color:$text-ash;
+              }
+              
+              &+li{
+                  margin-left: 15px;
+              }
+        }
+    }
+    
+   // 
+   p span{
+       color:$text-ash-2;
+   }
+    
+}

@@ -67,7 +67,7 @@ img {
 	display:none;
 	width: 40px;
 	height: 100px;
-	background: url(../../images/Home/btn.png) no-repeat;
+	background: url(../images/btn.png) no-repeat;
 	position: absolute;
 	top: 135px;
 }
