@@ -7,19 +7,14 @@ $text-ash-3: #e6e9ed;
 $text-placeholder:rgb(170, 178, 189);
 $text-white:#fff;
 $text-danger:rgb(222, 48, 50); // 主调字体
-
-
 //=================下面编写scss页面代码======================
 
 /*index*/
 
-.index{
-    
+.index {}
 
-    
-}
 .index-menu {
-        background: $text-white;
+    background: $text-white;
     .index-ttl {
         position: relative;
         width: 200px;
@@ -49,14 +44,14 @@ $text-danger:rgb(222, 48, 50); // 主调字体
 }
 
 .index .container-12 {
-     background: $text-white;
-    
+    background: $text-white;
 }
+
 // 轮播图
 .index-lbt {
     width: 920px;
     box-sizing: border-box;
-  background: $text-white;
+    background: $text-white;
 }
 
 // 公告
@@ -64,7 +59,7 @@ $text-danger:rgb(222, 48, 50); // 主调字体
     width: 230px;
     height: 400px;
     box-sizing: border-box;
-     background: $text-white;
+    background: $text-white;
     // 标题
     .notice-ttl {
         height: 38px;
@@ -78,10 +73,8 @@ $text-danger:rgb(222, 48, 50); // 主调字体
             color: rgb(50, 50, 50);
         }
     }
-    
     // 列表
     ul {
-   
         border: 1px solid #ddd;
         border-top: none;
         padding: 10px 10px;
@@ -100,7 +93,6 @@ $text-danger:rgb(222, 48, 50); // 主调字体
             }
         }
     }
-    
     // seting 小图标
     .table {
         margin-top: 20px;
@@ -109,11 +101,9 @@ $text-danger:rgb(222, 48, 50); // 主调字体
         // icon
         tr td {
             padding: 12px;
-            
-            a{
-                color:$text-df;
+            a {
+                color: $text-df;
             }
-       
             img {
                 width: 26px;
                 height: 26px;
@@ -131,96 +121,131 @@ $text-danger:rgb(222, 48, 50); // 主调字体
 }
 
 
+/*-选好货区*/
 
-/*-选好货区*/ 
-
-.index-discount{
-    
+.index-discount {
     padding-top: 60px;
-    
     // 标题
-    h4{
+    h4 {
         padding-left: 15px;
         margin-bottom: 15px;
-        color:$text-df;
-        border-left:  2px solid $text-danger ;
+        color: $text-df;
+        border-left: 2px solid $text-danger;
     }
-    
     // 大图
-    
-    .index-discount-br{
-        
-        border: 1px solid  $text-ash-3;
+    .index-discount-br {
+        border: 1px solid $text-ash-3;
         box-sizing: border-box;
-        
-           }
-    .big-img{
-         width: 250px;
-         padding: 10px;
-         
-         img{
-             
-             width:240px;
-             height: 290px;
-             
-         }
-    } 
-    
-    
-    //select-list
-     .select-list{
-          
-           
-          // 标题 
-          
-          ul {
-              li{
-                  float: left;
-                  border: 1px solid $text-ash-3;
-                  border-top:  none;
-                  
-                  
-                  &+li{
-                      border-left: none ;
-                  }
-                  
-                  &:last-child{
-                      border-right: none ;
-                  }
-                  
-                  
-                  a{
-                       display: block;
-                       padding: 0;
-                       width: 150px;
-                       height: 44px;
-                       line-height: 44px;
-                       text-align: center;
-                       font-size: 14px;
-                       
-                       transition:  all  .5s;
-                       
-                  }
-                  
-                  // select style in active
-                  
-                  &.active a{
-                      
-                      background: $text-danger;
-                      color:$text-white;
-                       
-                        &:hover{
-                            color:$text-white !important;
-                        }
-                  }
-                  
-              }
-          }
-           
-           
-      }
-    
-    
+    }
+    .big-img {
+        width: 250px;
+        padding: 10px;
+        img {
+            width: 240px;
+            height: 290px;
+            transition:  all .5s;
+            
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+    // select-list
+    .select-list {
+        // 标题 
+        ul {
+            li {
+                float: left;
+                border: 1px solid $text-ash-3;
+                border-top: none;
+                &+li {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+                a {
+                    display: block;
+                    padding: 0;
+                    width: 150px;
+                    height: 44px;
+                    line-height: 44px;
+                    text-align: center;
+                    font-size: 14px;
+                    transition: all .5s;
+                }
+                // select style in active
+                &.active a {
+                    background: $text-danger;
+                    color: $text-white;
+                    &:hover {
+                        color: $text-white !important;
+                    }
+                }
+            }
+        }
+        // 内容 tab-content
+        .tab-content {
+            width: 900;
+        }
+        .tab-pane {
+            .item {
+                width: 226px;
+                height: 300px;
+                float: left;
+                padding: 20px 20px;
+                border: 1px solid $text-ash-3;
+                border-top: none;
+                border-bottom: none;
+                text-align: center;
+                &+.item {
+                    border-left: none;
+                }
+                &:last-child {
+                    border-right: none;
+                }
+                img {
+                    display: inline-block;
+                    float: none;
+                    width: 160px;
+                    height: 160px;
+                    transition:  all .5s;
+                }
+                
+                // p desc
+                p{
+                    margin-top: 30px;
+                    height: 40px;
+                    line-height: 20x;
+                    font-size: 14px;
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                 
+            
+                    text-align: left;
+                }
+                
+                
+                // price
+                .price{
+                    
+                   margin-top: 15px;
+                   text-align: right;
+                   color:$text-danger;
+                   
+                   
+                   .iconfont{
+                       margin-right: -3px;
+                   }
+                }
+                
+                
+                &:hover img{
+                    transform: scale(1.05);
+                }
+                
+            }
+        }
+    }
 }
-
-

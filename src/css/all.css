@@ -101,7 +101,12 @@
     padding: 10px; }
     .index-discount .big-img img {
       width: 240px;
-      height: 290px; }
+      height: 290px;
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+      .index-discount .big-img img:hover {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05); }
   .index-discount .select-list ul li {
     float: left;
     border: 1px solid #e6e9ed;
@@ -118,13 +123,53 @@
       line-height: 44px;
       text-align: center;
       font-size: 14px;
-      -webkit-transition: all  .5s;
-      transition: all  .5s; }
+      -webkit-transition: all .5s;
+      transition: all .5s; }
     .index-discount .select-list ul li.active a {
       background: #de3032;
       color: #fff; }
       .index-discount .select-list ul li.active a:hover {
         color: #fff !important; }
+  .index-discount .select-list .tab-content {
+    width: 900; }
+  .index-discount .select-list .tab-pane .item {
+    width: 226px;
+    height: 300px;
+    float: left;
+    padding: 20px 20px;
+    border: 1px solid #e6e9ed;
+    border-top: none;
+    border-bottom: none;
+    text-align: center; }
+    .index-discount .select-list .tab-pane .item + .item {
+      border-left: none; }
+    .index-discount .select-list .tab-pane .item:last-child {
+      border-right: none; }
+    .index-discount .select-list .tab-pane .item img {
+      display: inline-block;
+      float: none;
+      width: 160px;
+      height: 160px;
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+    .index-discount .select-list .tab-pane .item p {
+      margin-top: 30px;
+      height: 40px;
+      line-height: 20x;
+      font-size: 14px;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left; }
+    .index-discount .select-list .tab-pane .item .price {
+      margin-top: 15px;
+      text-align: right;
+      color: #de3032; }
+      .index-discount .select-list .tab-pane .item .price .iconfont {
+        margin-right: -3px; }
+    .index-discount .select-list .tab-pane .item:hover img {
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05); }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -1184,7 +1229,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -5301,7 +5346,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5414,7 +5459,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
