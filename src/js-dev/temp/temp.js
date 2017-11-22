@@ -466,7 +466,67 @@ var index = function ($) {
 		});
 	}
 
+	/* 滑梯*/
+	function _huati() {
+
+		//划梯位置
+		function setHeight() {
+			var index_left = parseInt($('.container-12').offset().left);
+			var _left = parseInt($(".huati").width());
+			$(".huati").css("margin-top", -($(".huati").height() / 2));
+			if ($(window).width() > 1200 + _left) {
+
+				$(".huati").css("left", index_left - (_left + 2));
+			} else {
+				$(".huati").css("left", "5px");
+			}
+		}
+
+		setHeight();
+
+		// 划梯windows大小改变
+		$(window).resize(function () {
+
+			setHeight();
+		});
+
+		// 置顶
+		$(".huati .top").click(function () {
+
+			$('html,body').animate({
+				scrollTop: '0px'
+			}, 500);
+		});
+
+		// 点击锚点
+		$(".huati li a").click(function (e) {
+
+			e.preventDefault();
+
+			var id = $(this).attr("href");
+
+			var top = $(id).offset().top;
+
+			$('html,body').animate({
+				scrollTop: top
+			}, 500);
+		});
+
+		//划梯scroll
+		$(window).scroll(function () {
+
+			var index_top = parseInt($("#f1").offset().top);
+
+			if ($(window).scrollTop() >= index_top) {
+				$(".huati").stop().show();
+			} else {
+				$(".huati").hide();
+			}
+		});
+	}
+
 	return {
-		lbt: _lbt
+		lbt: _lbt,
+		huati: _huati
 	};
 }(window.jQuery);

@@ -19,7 +19,7 @@
 				effect: "fold",
 				autoPlay: true,
 				delayTime: 700,
-				autoPage: true,
+				autoPage:"<li><a></a></li>",
 				interval:3000
 				
 			});

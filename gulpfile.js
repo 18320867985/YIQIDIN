@@ -77,6 +77,8 @@ var paths = {
 		
 		//"src/js-dev/libs/jq/jquery.touchSwipe.min.js",	//jquery.touchSwipe.min.js 
 		
+		"src/js-dev/libs/jq/jjquery-Effect.min.js",  //jquery-Effect.min.js
+		
 		"src/js-dev/libs/vd/vd.js",  //数据验证
 		
 		"src/js-dev/libs/bs-3/bootstrap.js",  // bootstrap.js 3.0

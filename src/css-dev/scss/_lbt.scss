@@ -69,8 +69,9 @@ $lbt-w:920px;  // 轮播图宽度
 .index-cont-lbt-big .next {
     display:none;
     width: 40px;
-    height: 100px;
+    height: 100px !important;
     background: url(../images/btn.png) no-repeat;
+  
     position: absolute;
     top: 50%;
     margin-top: -50px;
