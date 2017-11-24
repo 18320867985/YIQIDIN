@@ -12,7 +12,7 @@
 		});
 	 * */
 	
-	;(function($){
+	+(function($){
 		
 		//minus
 		$(".minus").on("click",function(e){

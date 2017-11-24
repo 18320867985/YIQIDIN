@@ -448,20 +448,37 @@
         }
         // 置顶
         .top {
+            position: relative;
+            
             text-align: center;
             background: #fff;
-            .iconfont {
-                position: relative;
+           .iconfont {
+               
                 font-size: 32px;
                 color: $text-ash;
-                transition: all .8s;
-                transform: translate(0);
-                &:hover {
-                    transform:  translate(20px,20px);
+               
+             
+               
+            }
+            
+             &:hover .iconfont {
+                
                     color: $text-danger;
                     cursor: pointer;
                 }
-            }
+                
+           
+                
         }
     }
 }
+
+  
+     @keyframes iconfont-top{
+        form{
+            transform: translateY(-10px);
+        } 
+         to{
+            transform: translateY(10px);
+        }
+     }

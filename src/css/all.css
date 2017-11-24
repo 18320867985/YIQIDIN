@@ -8181,21 +8181,31 @@ img {
     .huati ul.nav li + li {
       border-top: none; }
   .huati ul.nav .top {
+    position: relative;
     text-align: center;
     background: #fff; }
     .huati ul.nav .top .iconfont {
-      position: relative;
       font-size: 32px;
-      color: rgba(70, 70, 70, 0.9);
-      -webkit-transition: all .8s;
-      transition: all .8s;
-      -webkit-transform: translate(0);
-              transform: translate(0); }
-      .huati ul.nav .top .iconfont:hover {
-        -webkit-transform: translate(20px, 20px);
-                transform: translate(20px, 20px);
-        color: #de3032;
-        cursor: pointer; }
+      color: rgba(70, 70, 70, 0.9); }
+    .huati ul.nav .top:hover .iconfont {
+      color: #de3032;
+      cursor: pointer; }
+
+@-webkit-keyframes iconfont-top {
+  form {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); } }
+
+@keyframes iconfont-top {
+  form {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px); }
+  to {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); } }
 
 .error, .seriousError {
   border: 1px red;

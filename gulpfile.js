@@ -102,13 +102,13 @@ var paths = {
 	 */
 	jsPath: [
 
-		"src/js-dev/common/com.js", //公共模块
+		"src/js-dev/common/*.js", 		// 1.公共模块
+		
+		"src/js-dev/api/*.js", 			// 2.自定api
 
-		"src/js-dev/common/df.js", //默认模块
+		"src/js-dev/component/*.js", 	// 3.公共组件
 
-		"src/js-dev/component/*.js", //公共组件
-
-		"src/js-dev/modules/*.js" //模块
+		"src/js-dev/modules/*.js" 		// 4.自定义模块
 
 	],
 

@@ -82,16 +82,17 @@ var index = (function($) {
 			});
 			
 			
-				//划梯scroll
+			
+		// 划梯scroll
 		$(window).scroll(function() {
 
 			var index_top = parseInt($("#f1").offset().top);
 
 			if($(window).scrollTop() >= index_top) {
-				$(".huati").stop().show();
+				$(".huati").stop().show("blind");
 
 			} else {
-				$(".huati").hide();
+				$(".huati").stop().hide("blind");
 			}
 		});
 
