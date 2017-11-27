@@ -1,38 +1,6 @@
 /*indepax*/
 
-.index-menu {
-    background: $text-white;
-    .index-ttl {
-        position: relative;
-        width: 200px;
-        height: 48px;
-        line-height: 48px;
-        background: $text-danger;
-        color: $text-white;
-        h4 {
-            padding: 0 !important;
-            width: 160px;
-            height: 48px;
-            line-height: 48px;
-            font-size: 16px;
-            text-align: center;
-        }
-        // icon
-        .icon {
-            position: absolute;
-            top: 9px;
-            right: 24px;
-            z-index: 2;
-            color: #f0f0f0;
-            font-size: 24px;
-            font-weight: 100;
-        }
-    }
-}
 
-.index .container-12 {
-    //  background: $text-white;
-}
 
 // 轮播图
 .index-lbt {

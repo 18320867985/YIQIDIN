@@ -1,5 +1,13 @@
 	
 	/*
+	
+	 <div class="number" >
+	    <button class="plus btn" type="button">+</button>
+	  <input class="num" type="number" value="1"data-min="0" data-max="9999" data-step="1" />
+	   <button class="minus btn" type="button">-</button>
+	  
+	 </div>
+
 	 * 数字框组件start
 	 * 事件：number_click
 	 *
@@ -12,7 +20,8 @@
 		});
 	 * */
 	
-	+(function($){
+	
++(function($){
 		
 		//minus
 		$(".minus").on("click",function(e){

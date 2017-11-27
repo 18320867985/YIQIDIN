@@ -77,7 +77,9 @@ var paths = {
 		
 		//"src/js-dev/libs/jq/jquery.touchSwipe.min.js",	//jquery.touchSwipe.min.js 
 		
-		"src/js-dev/libs/jq/jjquery-Effect.min.js",  //jquery-Effect.min.js
+		"src/js-dev/libs/jq/jquery-Effect.min.js",  		//jquery-Effect.min.js
+		
+		"src/js-dev/libs/jq/jquery.superslide.2.1.1.js",  //jquery.superslide.2.1.1.js
 		
 		"src/js-dev/libs/vd/vd.js",  //数据验证
 		

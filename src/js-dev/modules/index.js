@@ -89,10 +89,10 @@ var index = (function($) {
 			var index_top = parseInt($("#f1").offset().top);
 
 			if($(window).scrollTop() >= index_top) {
-				$(".huati").stop().show("blind");
+				$(".huati").stop().show(400);
 
 			} else {
-				$(".huati").stop().hide("blind");
+				$(".huati").stop().hide(400);
 			}
 		});
 

@@ -1,29 +1,24 @@
 	/*
-				 滚动监听
-				 <body data-spy="scroll" data-target="#scroll_ttl">
-					 
-					 <aside id="scroll_ttl">
+					 滚动监听
+					 <body data-spy="spy" data-target="#scroll_ttl">
+						 
+						 <aside id="scroll_ttl">
 
-						<ul>
-							<li class="active">
-								<a href="#banner_1">1</a>
-							</li>
-							<li>
-								<a href="#banner_2">2</a>
-							</li>
-							<li>
-								<a href="#banner_3">3</a>
-							</li>
-						</ul>
+							<ul>
+								<li class="active">
+									<a href="#banner_1">1</a>
+								</li>
+								<li>
+									<a href="#banner_2">2</a>
+								</li>
+								<li>
+									<a href="#banner_3">3</a>
+								</li>
+							</ul>
 
-					</aside>
-				 </body>
-			 */
-			
-			
-			
-			
-			
+						</aside>
+					 </body>
+				 */
 
 	var scroll = (function($) {
 
@@ -31,13 +26,16 @@
 
 			init: function(top) {
 
-				this.offsetTop = typeof top === "number" ? top : 0;
+				var _top = Number(top);
+				_top = isNaN(_top) ? 0 : _top;
+
+				this.offsetTop = _top;
 				this.bindEvent(this.offsetTop);
-				this.scrollList();
-				this.scroll(this.offsetTop);
+				this.onLoad();
 				this.onReset();
 
 			},
+
 			offsetTop: 0,
 
 			setOffsetTop: function(top) {
@@ -53,7 +51,15 @@
 				}.bind(this));
 
 			},
+			onLoad: function() {
 
+				$(window).load(function() {
+					this.scrollList();
+					this.scroll(this.offsetTop);
+
+				}.bind(this));
+
+			},
 
 			selector: function() {
 				var _tagget = $("[data-spy=spy]").attr("data-target");
@@ -68,8 +74,9 @@
 
 					// animation
 					var $this = $(this);
+					var _top = Math.floor($($this.attr("href")).offset().top) - parseInt(top);
 					$("body,html").stop().animate({
-						scrollTop: $($this.attr("href")).offset().top - top
+						scrollTop: _top
 					}, 500);
 
 				});
@@ -86,8 +93,8 @@
 
 					arrs.forEach(function(item) {
 
-						var m1 = parseInt(item.top) - parseInt(top);
-						var m2 = parseInt(item.maxTop) - parseInt(top);
+						var m1 = parseInt(item.top); //- parseInt(top);
+						var m2 = parseInt(item.maxTop); //- parseInt(top);
 						if($(window).scrollTop() >= (m1) && $(window).scrollTop() < (m2)) {
 							//alert(item.selector)
 							p.find("ul li").removeClass("active");
@@ -104,27 +111,34 @@
 
 				var objs = [];
 
+				var _offsetTop = this.offsetTop;
 				var els = this.selector().find("li");
 				for(var i = 0; i < els.length; i++) {
-					var obj = {}
+
 					var _el = $(els[i]).find("a").attr("href");
 
-					var _top = Math.floor($(_el).offset().top);
+					if(_el) {
 
-					var maxTop = 0;
-					if(i < (els.length - 1)) {
-						var _el2 = $(els[i + 1]).find("a").attr("href");
-						maxTop = Math.floor($(_el2).offset().top);
+						var obj = {}
+						var _top = Math.floor($(_el).offset().top) - _offsetTop;
 
-					} else {
-						maxTop = $(document).height();
+						var maxTop = 0;
+						if(i < (els.length - 1)) {
+							var _el2 = $(els[i + 1]).find("a").attr("href");
+							maxTop = Math.floor($(_el2).offset().top) - _offsetTop;
+
+						} else {
+							maxTop = Math.floor($(document).height());
+
+						}
+
+						obj.selector = _el;
+						obj.top = _top;
+						obj.maxTop = maxTop;
+						objs.push(obj);
 
 					}
 
-					obj.selector = _el;
-					obj.top = _top;
-					obj.maxTop = maxTop;
-					objs.push(obj);
 				}
 
 				return this.getScrollList = objs;

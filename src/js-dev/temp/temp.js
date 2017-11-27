@@ -85,26 +85,26 @@ common = function ($) {
 	};
 }(window.jQuery || window.Zepto);
 /*
-			 滚动监听
-			 <body data-spy="scroll" data-target="#scroll_ttl">
-				 
-				 <aside id="scroll_ttl">
+				 滚动监听
+				 <body data-spy="spy" data-target="#scroll_ttl">
+					 
+					 <aside id="scroll_ttl">
 
-					<ul>
-						<li class="active">
-							<a href="#banner_1">1</a>
-						</li>
-						<li>
-							<a href="#banner_2">2</a>
-						</li>
-						<li>
-							<a href="#banner_3">3</a>
-						</li>
-					</ul>
+						<ul>
+							<li class="active">
+								<a href="#banner_1">1</a>
+							</li>
+							<li>
+								<a href="#banner_2">2</a>
+							</li>
+							<li>
+								<a href="#banner_3">3</a>
+							</li>
+						</ul>
 
-				</aside>
-			 </body>
-		 */
+					</aside>
+				 </body>
+			 */
 
 var scroll = function ($) {
 
@@ -112,12 +112,15 @@ var scroll = function ($) {
 
 		init: function init(top) {
 
-			this.offsetTop = typeof top === "number" ? top : 0;
+			var _top = Number(top);
+			_top = isNaN(_top) ? 0 : _top;
+
+			this.offsetTop = _top;
 			this.bindEvent(this.offsetTop);
-			this.scrollList();
-			this.scroll(this.offsetTop);
+			this.onLoad();
 			this.onReset();
 		},
+
 		offsetTop: 0,
 
 		setOffsetTop: function setOffsetTop(top) {
@@ -127,6 +130,13 @@ var scroll = function ($) {
 		onReset: function onReset() {
 
 			$(window).resize(function () {
+				this.scrollList();
+				this.scroll(this.offsetTop);
+			}.bind(this));
+		},
+		onLoad: function onLoad() {
+
+			$(window).load(function () {
 				this.scrollList();
 				this.scroll(this.offsetTop);
 			}.bind(this));
@@ -144,8 +154,9 @@ var scroll = function ($) {
 
 				// animation
 				var $this = $(this);
+				var _top = Math.floor($($this.attr("href")).offset().top) - parseInt(top);
 				$("body,html").stop().animate({
-					scrollTop: $($this.attr("href")).offset().top - top
+					scrollTop: _top
 				}, 500);
 			});
 		},
@@ -160,8 +171,8 @@ var scroll = function ($) {
 
 				arrs.forEach(function (item) {
 
-					var m1 = parseInt(item.top) - parseInt(top);
-					var m2 = parseInt(item.maxTop) - parseInt(top);
+					var m1 = parseInt(item.top); //- parseInt(top);
+					var m2 = parseInt(item.maxTop); //- parseInt(top);
 					if ($(window).scrollTop() >= m1 && $(window).scrollTop() < m2) {
 						//alert(item.selector)
 						p.find("ul li").removeClass("active");
@@ -176,25 +187,30 @@ var scroll = function ($) {
 
 			var objs = [];
 
+			var _offsetTop = this.offsetTop;
 			var els = this.selector().find("li");
 			for (var i = 0; i < els.length; i++) {
-				var obj = {};
+
 				var _el = $(els[i]).find("a").attr("href");
 
-				var _top = Math.floor($(_el).offset().top);
+				if (_el) {
 
-				var maxTop = 0;
-				if (i < els.length - 1) {
-					var _el2 = $(els[i + 1]).find("a").attr("href");
-					maxTop = Math.floor($(_el2).offset().top);
-				} else {
-					maxTop = $(document).height();
+					var obj = {};
+					var _top = Math.floor($(_el).offset().top) - _offsetTop;
+
+					var maxTop = 0;
+					if (i < els.length - 1) {
+						var _el2 = $(els[i + 1]).find("a").attr("href");
+						maxTop = Math.floor($(_el2).offset().top) - _offsetTop;
+					} else {
+						maxTop = Math.floor($(document).height());
+					}
+
+					obj.selector = _el;
+					obj.top = _top;
+					obj.maxTop = maxTop;
+					objs.push(obj);
 				}
-
-				obj.selector = _el;
-				obj.top = _top;
-				obj.maxTop = maxTop;
-				objs.push(obj);
 			}
 
 			return this.getScrollList = objs;
@@ -214,8 +230,88 @@ var scroll = function ($) {
 	};
 }(window.jQuery || window.Zepto);
 
+
+/*单个按钮组件
+ * 
+ * 
+ * <ul>
+ * 	<li class="comp-btn"> 
+ * 		<a class="comp-btn-item">技术牛逼</a>
+ * 	</li>
+ * 	<li class="comp-btn"> 
+ * 		<a class="comp-btn-item">信息大师</a>
+ * 	</li>
+ * </ul>
+ * 
+ * 		
+ * 选中点击事件
+		$(".comp-btn").on("comp_btn_select",function(event,element){			
+			
+			// element 当前点击的元素
+			alert($(element));
+		});
+		
+		// 取消点击事件
+		$(".comp-btn").on("comp_btn_unselect",function(event,element){			
+			
+			// element 当前点击的元素
+			alert($(element));
+		});
+ * 
+ * */
+
++function ($) {
+
+	$(".comp-btn-item").on("click", function () {
+
+		if (typeof $(this).attr("data-bl") === "undefined") {
+			$(this).addClass("active");
+			$(this).attr("data-bl", "true");
+
+			//点击触发自定义事件
+			$(this).trigger("comp_btn_select", [this]);
+		} else {
+			//点击触发自定义事件
+			$(this).trigger("comp_btn_unselect", [this]);
+			$(this).removeClass("active");
+			$(this).removeAttr("data-bl");
+		}
+	});
+}(window.jQuery || window.Zepto);
+/*****单选按钮组件**
+ * 
+ * 
+ * <div class="comp-radio">             
+   <div class="comp-radio-item active">盆</div>
+   <div class="comp-radio-item">箱</div>
+   <div class="comp-radio-item">斤</div>
+   <div class="comp-radio-item">米</div>
+   </div>
+ * 
+ * 
+ * ****/
+
++function ($) {
+
+	$(".comp-radio-item").on("tap", function () {
+		var p = $(this).parents(".comp-radio");
+		$(".comp-radio-item", p).removeClass("active");
+		$(this).addClass("active");
+
+		//点击触发自定义事件
+		$(this).trigger("radio_click", [this]);
+	});
+}(window.jQuery || window.Zepto);
+
 /*
- * 数字框组件start
+
+ <div class="number" >
+    <button class="plus btn" type="button">+</button>
+  <input class="num" type="number" value="1"data-min="0" data-max="9999" data-step="1" />
+   <button class="minus btn" type="button">-</button>
+  
+ </div>
+	 * 数字框组件start
  * 事件：number_click
  *
  * 点击事件
@@ -518,9 +614,9 @@ var index = function ($) {
 			var index_top = parseInt($("#f1").offset().top);
 
 			if ($(window).scrollTop() >= index_top) {
-				$(".huati").stop().show("blind");
+				$(".huati").stop().show(400);
 			} else {
-				$(".huati").stop().hide("blind");
+				$(".huati").stop().hide(400);
 			}
 		});
 	}
@@ -528,5 +624,82 @@ var index = function ($) {
 	return {
 		lbt: _lbt,
 		huati: _huati
+	};
+}(window.jQuery);
+var proddtl = function ($) {
+
+	var _init = function _init() {
+
+		//缩列图
+		$(".jqzoom .list-imgs img").hover(function () {
+
+			$(".jqzoom-img img").attr("src", $(this).attr("src")).hide().show();
+		});
+
+		var list = {};
+		list.index = 0;
+
+		list.df = 3;
+		list.size = $(".list-imgs li").size();
+
+		list.wdith = $(".list-imgs li").outerWidth(true);
+		$(".list-imgs").width(list.size * list.wdith);
+
+		$(".list-imgs-big").on("mouseenter", function () {
+
+			if (list.size > list.df) {
+
+				lr_btn_ff();
+			}
+		});
+
+		function lr_btn_ff() {
+
+			if (list.index === 0) {
+				$(".left-btn").hide();
+			} else {
+				$(".left-btn").show();
+			}
+
+			if (list.index + list.df >= list.size) {
+				$(".right-btn").hide();
+			} else {
+				$(".right-btn").show();
+			}
+		}
+		$(".list-imgs-big").on("mouseleave", function () {
+
+			$(this).find(".btn").hide();
+		});
+
+		$(".right-btn").click(function () {
+			if (list.index + list.df >= list.size) {
+				return;
+			}
+			list.index++;
+			$(".list-imgs").animate({
+
+				left: "-=" + list.wdith
+			}, 400);
+
+			lr_btn_ff();
+		});
+
+		$(".left-btn").click(function () {
+			if (list.index === 0) {
+				return;
+			}
+			list.index--;
+			$(".list-imgs").animate({
+
+				left: "+=" + list.wdith
+			}, 400);
+
+			lr_btn_ff();
+		});
+	};
+
+	return {
+		init: _init
 	};
 }(window.jQuery);
