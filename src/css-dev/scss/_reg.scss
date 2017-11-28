@@ -1,0 +1,132 @@
+/*注册*/
+
+.reg-logo {
+    width: 100%;
+    height: 180px;
+    padding: 40px 0;
+    background: url(../../images/reg-bg.png);
+    $reg-head-h: 100px;
+    .logo-l {
+        img {
+            min-width: 60px;
+            height: $reg-head-h;
+            background: #ccc;
+        }
+    }
+    .logo-r {
+        height: $reg-head-h;
+        line-height: $reg-head-h;
+        font-size: 16px;
+        span {}
+        a {
+            margin-left: 10px;
+            color: $brand-info;
+        }
+    }
+}
+
+//reg-content
+.reg-content {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    min-height: 500px;
+    padding: 20px;
+    border: 1px solid $text-ash-3;
+    box-shadow: 2px 2px 5px $text-ash-3, -2px -2px 5px $text-ash-3;
+    background: $text-white;
+      
+    h4 {
+        padding: 10px 0 20px 20px;
+        border-bottom: 1px solid $text-ash-3;
+    }
+    // reg-form 
+    .reg-form {
+        margin-top: 40px;
+       padding-bottom: 30px;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        color: $text-777;
+      
+        $input-h: 34px;
+        $input-w:280px;
+        label {
+            display: inline-block;
+            width: 100px;
+            height: $input-h;
+            padding-right: 10px;
+            line-height: $input-h;
+            text-align: right;
+        }
+        .txt {
+            width: $input-w;
+            height: $input-h;
+            .form-control{
+                font-size: 14px;
+            }
+        }
+        label,
+        .txt {
+            float: left;
+        }
+        .yzm-btn .btn {
+            height: $input-h;
+            width: 80px;
+            padding: 0;
+            text-align: center;
+            font-style: oblique;
+            color: $text-danger;
+            font-weight: 600;
+            background: $text-white !important;
+        }
+        .form-group+.form-group {
+            margin-top: 25px !important;
+        }
+        
+        
+        .xieyi {
+            label {
+                display: inline !important;
+                margin-left: 100px;
+                width: auto;
+                padding-right: 0;
+                text-align: left;
+                input[type=checkbox],
+                span,
+                a {
+                    font-size: 12px;
+                   // vertical-align:  middle;
+              
+                }
+                
+                  input[type=checkbox]{
+                      font-size: 10px;
+                  }
+            }
+            a {
+                display: inline-block;
+                height: $input-h;
+                padding: 0;
+                line-height: $input-h;
+                
+                color:$brand-info;
+                
+                &:hover{
+                    color:green !important;
+                }
+            }
+        }
+        
+        
+        // 立即注册
+          .submit-btn{
+              
+              .btn.btn-danger{
+                  margin-left: 100px;
+                 padding: 6px 8px ;
+                  width:$input-w ;
+                  
+              }
+          }
+    }
+}

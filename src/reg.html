@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+	</head>
+
+	<body data-spy="scroll" data-target=".huati">
+		<!-- header -->
+		<header>
+
+			<!--logo-->
+			<div class="reg-logo ">
+				<div class="container-12">
+					<div class="clearfix">
+						<!--logo-->
+						<div class="logo-l pull-left">
+							<img src="" alt="LOGO 120*100" />
+						</div>
+
+						<div class="logo-r pull-right">
+							<p>
+								<span>已有账号,</span>
+								<a href="logo.hmtl">登录</a>
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--red line-->
+			<div class="header-topLine"></div>
+
+		</header>
+
+		<!--content-->
+		<section class="reg">
+
+			<div class="container-12">
+				<div class="reg-content">
+
+					<h4>新用户注册</h4>
+
+					<form class="reg-form " novalidate="novalidate">
+						<div class="form-group  clearfix vd-box">
+
+							<label class="" for="">用户名:</label>
+							<div class="txt">
+								<input class="form-control rd-no2 vd-item" type="text" name="userName" id="" value="" placeholder="用户名" autocomplete="off" vd-req vd-req-msg="用户名不能为空" />
+
+								<span class="vd-req "></span>
+							</div>
+
+						</div>
+
+						<div class="form-group  clearfix vd-box">
+
+							<label class="" for="">公司名称:</label>
+							<div class="txt">
+								<input class="form-control rd-no2 vd-item" type="text" name="compName" id="" value="" placeholder="公司名称" autocomplete="off" vd-req vd-req-msg="公司名称不能为空" />
+								<span class="vd-req "></span>
+							</div>
+
+						</div>
+						<div class="form-group  clearfix vd-box">
+
+							<label class="" for="">电子邮箱:</label>
+							<div class="txt">
+								<input class="form-control rd-no2 vd-item" type="text" name="emainBox" id="" value="" placeholder="电子邮箱" autocomplete="off" vd-req vd-req-msg="电子邮箱不能为空" vd-pattern="^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$" vd-pattern-msg="电子邮箱格式不对" />
+
+								<span class="vd-req "></span>
+								<span class="vd-pattern"> </span>
+							</div>
+
+						</div>
+
+						<div class="form-group  clearfix vd-box">
+
+							<label class="" for="">手机号码:</label>
+							<div class="txt">
+								<input class="form-control rd-no2  vd-item" type="text" name="phone" id="" value="" placeholder="手机号码" autocomplete="off" vd-req vd-req-msg="手机号码不能为空" vd-pattern="^1\d{10}$" vd-pattern-msg="手机格式不对" maxlength="11" vd-remote="json/remote.json" vd-remote-msg="手机号码已存在" />
+								<span class="vd-req "></span>
+								<span class="vd-pattern"> </span>
+								<span class="vd-remote"> </span>
+
+							</div>
+
+						</div>
+
+						<div class="form-group  clearfix vd-box">
+
+							<label class="" for="">密码:</label>
+							<div class="txt">
+								<input class="form-control rd-no2 vd-item" type="password" value="" placeholder="密码" autocomplete="off" name="pwd" vd-req vd-req-msg="密码不能为空" vd-pattern="^\S{8,32}$" vd-pattern-msg="密码长度8到32位" vd-compare-emit="pwd2" />
+
+								<span class="vd-req "></span>
+								<span class="vd-pattern"> </span>
+							</div>
+
+						</div>
+
+						<div class="form-group  clearfix vd-box">
+
+							<label class="" for="">确认密码:</label>
+							<div class="txt">
+								<input class="form-control rd-no2 vd-item" type="password" placeholder="确认密码" name="pwd2" vd-req vd-req-msg="密码不能为空" vd-compare="pwd" vd-compare-msg="两次密码不能相同" />
+							</div>
+
+						</div>
+
+						<div class="form-group  clearfix vd-box">
+
+							<label class="" for="">验证吗:</label>
+							<div class="txt ">
+								<div class="input-group">
+									<input class="form-control rd-no2 vd-item" type="text" placeholder="验证吗" maxlength="4" autocomplete="off" name="yzm" vd-req vd-req-msg="验证码不能为空" vd-compare="yzm-old" vd-compare-msg="验证码不对" />
+
+									<div class="input-group-btn yzm-btn">
+										<input type="button" class="btn  btn-default rd-no2" value="2580" />
+									</div>
+
+								</div>
+
+								<span class="vd-req "></span>
+								<span class="vd-compare "></span>
+
+							</div>
+
+						</div>
+
+						<!--动态验证码-->
+						<div class="form-group  clearfix vd-box v-hide">
+							<div class="input-group-btn yzm-btn">
+								<input type="button" name="yzm-old" class="btn  btn-default rd-no2  dyyzm-old vd-item" vd-req vd-compare-emit="yzm" />
+							</div>
+
+						</div>
+
+						<div class="form-group xieyi  clearfix  vd-box">
+							<label for="ck_1">
+									<input class="vd-item" type="checkbox" name="ck" 
+										 vd-ck vd-ck-ok vd-ck-true="1" vd-ck-false="0" value="1" vd-ck-msg="你没有同意协议"/>
+									<span>我已阅读并同意</span>
+									
+							</label>
+
+							<a href="javascript:;">《经销商协议》 </a>
+ 							<span class="vd-req "></span>
+						</div>
+
+						<div class="form-group  submit-btn  clearfix ">
+
+							<input class="btn btn-danger rd-no btn-lg vd-btn" type="button" name="" id="" value="立即注册" />
+
+						</div>
+
+					</form>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!--页脚 -->
+		<footer>
+
+			<div class="index-ft">
+
+				<div class="com-footer container-12">
+					<ul class="clearfix">
+						<li>
+							<a href="#">关于易企订</a>
+						</li>
+
+						<li>
+							<a href="#">交易平台</a>
+						</li>
+						<li>
+							<a href="#">易企订产品</a>
+						</li>
+						<li>
+							<a href="#">行业信息</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+					</ul>
+
+					<p class="text-center ">
+						<span>CopyRight</span>
+						<span>@2004-2020</span>
+						<span>易企订 yiqidin.com</span>
+						<span>所有版权</span>
+					</p>
+				</div>
+
+			</div>
+
+		</footer>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--[if lte IE 8]>
+			<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			$(function() {
+
+				// 初始化验证对象
+				var vd1 = vd.create(".reg-form ");
+				vd1.init();
+				$(".vd-btn").on("click", function() {
+
+					// 是否验证成功
+					vd1.isSuccess(function(obj) {
+
+						alert(JSON.stringify(obj));
+
+					}, function(obj) {
+
+						//alert(obj.errorMsg)
+						// error 
+						//					mui.alert(obj.errorMsg," ","确认",function(){
+						obj.el.focus();
+						//					});
+						//					
+
+					});
+				});
+
+
+
+				// 动态验证码
+				var dyyzm1 = getYzm();
+				$(".yzm-btn .btn").val(dyyzm1);
+				$(".dyyzm-old").val(dyyzm1);
+
+				$(".yzm-btn .btn").click(function() {
+					var dyyzm2 = getYzm();
+					$(this).val(dyyzm2);
+					$(".dyyzm-old").val(dyyzm2);
+				});
+
+				function getYzm() {
+					return Math.floor(Math.random() * 1000000).toString().substring(0, 4);
+				}
+
+			});
+		</script>
+	</body>
+
+</html>

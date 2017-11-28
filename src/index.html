@@ -42,7 +42,7 @@
 					<div class="row">
 						<!--logo-->
 						<div class="logo pull-left">
-							LOGO
+						<img src="" alt="LOGO 120*100" />	
 						</div>
 						<!--search box-->
 						<div class="search pull-left">
@@ -102,25 +102,25 @@
 							<ul class="lbt-items">
 
 								<li>
-									<a href="#" target="_blank"><img src="images/1.jpg" /></a>
+									<a href="#" target="_blank"><img src="images/1.jpg" alt="920*400" /></a>
 								</li>
 								<li>
-									<a href="#" target="_blank"><img src="images/2.jpg" /></a>
+									<a href="#" target="_blank"><img src="images/2.jpg"  alt="920*400" /></a>
 								</li>
 								<li>
-									<a href="#" target="_blank"><img src="images/3.jpg" /></a>
+									<a href="#" target="_blank"><img src="images/3.jpg" alt="920*400"  /></a>
 								</li>
 								<li>
-									<a href="#" target="_blank"><img src="images/4.jpg" /></a>
+									<a href="#" target="_blank"><img src="images/4.jpg" alt="920*400"  /></a>
 								</li>
 								<li>
-									<a href="#" target="_blank"><img src="images/5.jpg" /></a>
+									<a href="#" target="_blank"><img src="images/5.jpg" alt="920*400"  /></a>
 								</li>
 								<li>
-									<a href="#" target="_blank"><img src="images/6.jpg" /></a>
+									<a href="#" target="_blank"><img src="images/6.jpg" alt="920*400"  /></a>
 								</li>
 								<li>
-									<a href="#" target="_blank"><img src="images/7.jpg" /></a>
+									<a href="#" target="_blank"><img src="images/7.jpg" alt="920*400"  /></a>
 								</li>
 							</ul>
 							<a class="prev" href="javascript:void(0)"></a>
@@ -332,7 +332,7 @@
 							<div class="tab-pane  fade " id="a2">
 								<div class="item">
 									<a href="javascript:">
-										<img src="images/youhui-1.png" alt="优选好货 图片" />
+										<img src="images/youhui-2.png" alt="优选好货 图片" />
 										<div class="caption">
 											<p>
 												Nutrilon诺优能 幼儿配方奶粉 3段 12-36月个月800克/罐
@@ -348,7 +348,7 @@
 
 								<div class="item">
 									<a href="javascript:">
-										<img src="images/youhui-2.png" alt="优选好货 图片" />
+										<img src="images/youhui-1.png" alt="优选好货 图片" />
 										<div class="caption">
 											<p>
 												Nutrilon诺优能 幼儿配方奶粉 3段 12-36月个月800克/罐
@@ -404,7 +404,7 @@
 							<div class="tab-pane  fade " id="a3">
 								<div class="item">
 									<a href="javascript:">
-										<img src="images/youhui-1.png" alt="优选好货 图片" />
+										<img src="images/youhui-3.png" alt="优选好货 图片" />
 										<div class="caption">
 											<p>
 												Nutrilon诺优能 幼儿配方奶粉 3段 12-36月个月800克/罐
@@ -548,7 +548,7 @@
 							<div class="tab-pane  fade" id="a5">
 								<div class="item">
 									<a href="javascript:">
-										<img src="images/youhui-1.png" alt="优选好货 图片" />
+										<img src="images/youhui-2.png" alt="优选好货 图片" />
 										<div class="caption">
 											<p>
 												Nutrilon诺优能 幼儿配方奶粉 3段 12-36月个月800克/罐
@@ -620,7 +620,7 @@
 							<div class="tab-pane  fade " id="a6">
 								<div class="item">
 									<a href="javascript:">
-										<img src="images/youhui-1.png" alt="优选好货 图片" />
+										<img src="images/youhui-3.png" alt="优选好货 图片" />
 										<div class="caption">
 											<p>
 												Nutrilon诺优能 幼儿配方奶粉 3段 12-36月个月800克/罐
@@ -1702,6 +1702,17 @@
 				// 轮播图
 				index.lbt();
 				index.huati();
+				
+				// 优选好货
+				$('.select-list a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+				  e.target // newly activated tab
+				 // alert(e.target.innerText)
+				
+				});
+//				$('.select-list a[data-toggle="tab"]').hover(function(){
+//					
+//					$(this).tab("show");
+//				});
 
 			})
 		</script>

@@ -244,7 +244,8 @@ var scroll = function ($) {
  * </ul>
  * 
  * 		
- * 选中点击事件
+ * 		
+ 		//选中点击事件
 		$(".comp-btn").on("comp_btn_select",function(event,element){			
 			
 			// element 当前点击的元素
@@ -257,6 +258,7 @@ var scroll = function ($) {
 			// element 当前点击的元素
 			alert($(element));
 		});
+		
  * 
  * */
 
