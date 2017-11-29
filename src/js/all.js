@@ -471,6 +471,9 @@ var vd = (function($) {
 						$(el).removeClass("vd-error");
 						$(p).addClass("vd-ok");
 						$(".vd-dep-btn", p).removeClass("vd-error").addClass("vd-ok"); //依赖按钮
+						
+						$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
+												
 					
 
 					} else {
@@ -482,7 +485,9 @@ var vd = (function($) {
 						$(p).removeClass("vd-ok");
 						$(el).addClass("vd-error");
 						$(".vd-dep-btn", p).addClass("vd-error").removeClass("vd-ok"); //依赖按钮
-							
+						
+						$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
+						$(p).find(".vd-req").addClass("vd-error").text(_ck_msg);
 
 						return;
 
@@ -3113,27 +3118,28 @@ common = function ($) {
 
 	};
 }(window.jQuery || window.Zepto);
+
 /*
-				 滚动监听
-				 <body data-spy="spy" data-target="#scroll_ttl">
-					 
-					 <aside id="scroll_ttl">
+					 滚动监听
+					 <body data-spy="spy" data-target="#scroll_ttl">
+						 
+						 <aside id="scroll_ttl">
 
-						<ul>
-							<li class="active">
-								<a href="#banner_1">1</a>
-							</li>
-							<li>
-								<a href="#banner_2">2</a>
-							</li>
-							<li>
-								<a href="#banner_3">3</a>
-							</li>
-						</ul>
+							<ul>
+								<li class="active">
+									<a href="#banner_1">1</a>
+								</li>
+								<li>
+									<a href="#banner_2">2</a>
+								</li>
+								<li>
+									<a href="#banner_3">3</a>
+								</li>
+							</ul>
 
-					</aside>
-				 </body>
-			 */
+						</aside>
+					 </body>
+				 */
 
 var scroll = function ($) {
 

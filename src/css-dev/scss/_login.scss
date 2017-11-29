@@ -1,2 +1,94 @@
-
 /*登陆*/
+
+.login-header {
+    width: 100%;
+    height: 100px;
+    // logo
+    $login-head-h: 100px;
+    .logo-img {
+        min-width: 60px;
+        height: $login-head-h;
+        background: #ccc;
+    }
+}
+
+// 背景大图
+.login-bgimg {
+    width: 100%;
+    height: 650px;
+}
+
+// 登陆框
+// 大框
+.login-box {
+    position: relative;
+    top: -650px;
+    right: 0;
+    z-index: 3;
+}
+
+// 内容区域
+.login-box-cont {
+    position: absolute;
+    z-index: 5;
+    top: 100px;
+    right: 0;
+    width: 340px;
+    min-height: 300px;
+    padding: 20px;
+    background: $text-white;
+    box-shadow: 2px 2px 5px #ddd;
+    h4 {
+        margin-bottom: 30px;
+        font: "微软雅黑" 16px;
+        color: $text-df;
+    }
+    // 文本框
+    .txt {
+        height: 40px;
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid $text-ash-3;
+        padding-left: 50px;
+        font-size: 14px;
+    }
+    // icon用户与密码图标
+    .iconfont {
+        position: absolute;
+        font-size: 24px;
+        top: 3px;
+        left: 10px;
+        z-index: 5;
+        color: $text-ash-2;
+    }
+    .form-group+.form-group {
+        margin-top: 30px;
+    }
+    // link
+    .login-link {
+        margin-top: 20px;
+    }
+    .submit-btn {
+        margin-top: 30px;
+        padding: 10px 12px;
+        background: $text-danger;
+          color:$text-white;
+        border: none;
+    }
+    .submit-btn.vd-error {
+        margin-top: 30px;
+        padding: 10px 12px;
+        background: $text-ash-2;
+        color:$text-white;
+        border: none;
+    }
+    
+    
+    // 错误信息
+    .error-msg{
+       
+        padding: 10px 8px;
+        color:$text-danger;
+        
+    }
+}

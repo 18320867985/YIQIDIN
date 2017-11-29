@@ -7594,7 +7594,7 @@ a:hover {
 .vd-box .vd-remote,
 .vd-box .vd-compare {
   display: none;
-  color: red; }
+  color: #de3032; }
 
 /* 错误 */
 .vd-box .vd-req.vd-error,
@@ -7623,25 +7623,31 @@ a:hover {
 .vd-dep-btn.vd-ok {
   color: green !important; }
 
+.vd-box.vd-ok .iconfont {
+  color: green !important; }
+
 /*提交按钮*/
 /*当前的元素error*/
 .vd-box.vd-error .vd-item.vd-error {
-  color: red !important;
-  border: 1px solid red !important; }
+  color: #de3032 !important;
+  border: 1px solid #de3032 !important; }
 
 .vd-box.vd-error .btn.btn-default {
-  color: red !important;
-  border: 1px solid red !important; }
+  color: #de3032 !important;
+  border: 1px solid #de3032 !important; }
 
 .vd-box.vd-error textarea.vd-item.vd-error {
-  color: red !important;
-  border: 1px solid red !important; }
+  color: #de3032 !important;
+  border: 1px solid #de3032 !important; }
 
 .vd-box.vd-error label {
-  color: red !important; }
+  color: #de3032 !important; }
 
 .vd-dep-btn.vd-error {
-  color: red !important; }
+  color: #de3032 !important; }
+
+.vd-box.vd-error .iconfont {
+  color: #de3032 !important; }
 
 /*提交按钮*/
 /*header*/
@@ -8463,7 +8469,7 @@ img {
   width: 100%;
   height: 180px;
   padding: 40px 0;
-  background: url(../../images/reg-bg.png); }
+  background: url(../images/reg-bg.png); }
   .reg-logo .logo-l img {
     min-width: 60px;
     height: 100px;
@@ -8520,17 +8526,19 @@ img {
       font-weight: 600;
       background: #fff !important; }
     .reg-content .reg-form .form-group + .form-group {
-      margin-top: 25px !important; }
+      margin-top: 30px !important; }
     .reg-content .reg-form .xieyi label {
       display: inline !important;
       margin-left: 100px;
       width: auto;
       padding-right: 0;
       text-align: left; }
-      .reg-content .reg-form .xieyi label input[type=checkbox],
-      .reg-content .reg-form .xieyi label span,
-      .reg-content .reg-form .xieyi label a {
-        font-size: 12px; }
+      .reg-content .reg-form .xieyi label input[type=checkbox] {
+        position: relative;
+        top: 2px; }
+      .reg-content .reg-form .xieyi label span {
+        font-size: 12px;
+        vertical-align: baseline; }
       .reg-content .reg-form .xieyi label input[type=checkbox] {
         font-size: 10px; }
     .reg-content .reg-form .xieyi a {
@@ -8541,12 +8549,125 @@ img {
       color: #337ab7; }
       .reg-content .reg-form .xieyi a:hover {
         color: green !important; }
-    .reg-content .reg-form .submit-btn .btn.btn-danger {
+    .reg-content .reg-form .xieyi span.vd-req {
+      margin-left: -100px !important; }
+    .reg-content .reg-form .submit-btn .btn.vd-btn {
       margin-left: 100px;
-      padding: 6px 8px;
-      width: 280px; }
+      padding: 8px 10px;
+      width: 280px;
+      background: #de3032;
+      color: #fff;
+      border: none; }
+      .reg-content .reg-form .submit-btn .btn.vd-btn.vd-error {
+        background: #aab2bd;
+        color: #f8f8f8; }
+
+/* 注册成功页面*/
+.reg-ok {
+  min-height: 400px;
+  background: #fff; }
+
+.reg-ok-cont {
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 20%; }
+  .reg-ok-cont .iconfont {
+    font-size: 36px;
+    color: green; }
+  .reg-ok-cont h5 {
+    font-size: 18px; }
+  .reg-ok-cont .r {
+    padding-top: 8px;
+    padding-left: 5px; }
 
 /*登陆*/
+.login-header {
+  width: 100%;
+  height: 100px; }
+  .login-header .logo-img {
+    min-width: 60px;
+    height: 100px;
+    background: #ccc; }
+
+.login-bgimg {
+  width: 100%;
+  height: 650px; }
+
+.login-box {
+  position: relative;
+  top: -650px;
+  right: 0;
+  z-index: 3; }
+
+.login-box-cont {
+  position: absolute;
+  z-index: 5;
+  top: 100px;
+  right: 0;
+  width: 340px;
+  min-height: 300px;
+  padding: 20px;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 5px #ddd;
+          box-shadow: 2px 2px 5px #ddd; }
+  .login-box-cont h4 {
+    margin-bottom: 30px;
+    font: "微软雅黑" 16px;
+    color: #464646; }
+  .login-box-cont .txt {
+    height: 40px;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #e6e9ed;
+    padding-left: 50px;
+    font-size: 14px; }
+  .login-box-cont .iconfont {
+    position: absolute;
+    font-size: 24px;
+    top: 3px;
+    left: 10px;
+    z-index: 5;
+    color: #aab2bd; }
+  .login-box-cont .form-group + .form-group {
+    margin-top: 30px; }
+  .login-box-cont .login-link {
+    margin-top: 20px; }
+  .login-box-cont .submit-btn {
+    margin-top: 30px;
+    padding: 10px 12px;
+    background: #de3032;
+    color: #fff;
+    border: none; }
+  .login-box-cont .submit-btn.vd-error {
+    margin-top: 30px;
+    padding: 10px 12px;
+    background: #aab2bd;
+    color: #fff;
+    border: none; }
+  .login-box-cont .error-msg {
+    padding: 10px 8px;
+    color: #de3032; }
+
+/*购物车*/
+.shopcart-cont {
+  margin-top: 30px; }
+  .shopcart-cont .ttl {
+    height: 46px;
+    line-height: 46px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    text-align: center; }
+  .shopcart-cont .ttl2 {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    height: 46px;
+    line-height: 46px;
+    background: #f8f8f8;
+    border: 1px solid #ddd; }
+
 .error, .seriousError {
   border: 1px red;
   background-color: #fdd; }
