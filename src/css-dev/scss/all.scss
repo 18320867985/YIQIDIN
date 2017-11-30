@@ -1,35 +1,38 @@
 
 
-@import "var.scss";                     // variable
+@import "var.scss";                          // variable
 
-//@import "mui-scss/mui.scss";          // mui scss
+//@import "mui-scss/mui.scss";               // mui scss
 
-//@import "bs-scss-4/bootstrap.scss";   // bootstrap 4.* scss
+//@import "bs-scss-4/bootstrap.scss";       // bootstrap 4.* scss
 
-@import "bs-scss-3/_bootstrap.scss";    // bootstrap 3.* scss
+@import "bs-scss-3/_bootstrap.scss";        // bootstrap 3.* scss
 
-@import "fa-scss/font-awesome.scss";    // fa 字体
+@import "fa-scss/font-awesome.scss";         // fa 字体
 
 
-@import "df.scss";                      // default scss
+@import "df.scss";                           // default scss
 
-@import "vd.scss";                      // 验证   scss
+@import "vd.scss";                           // 验证   scss
+    
+@import "header.scss";                       // header
 
-@import "header.scss";                   // header
+@import "footer.scss";                       // footer
 
-@import "footer.scss";                   // footer
-
-@import "lbt.scss";                       // 轮播图
+@import "lbt.scss";                         // 轮播图
 
 @import "index.scss";                       // 首页
 
-@import "proddtl.scss";                       // 商品详情
+@import "proddtl.scss";                     // 商品详情
 
-@import "reg.scss";                       // 注册
+@import "reg.scss";                         // 注册
 
 @import "login.scss";                       // 登陆
 
-@import "shopcart.scss";                       // 购物车
+@import "shopcart.scss";                    // 购物车
+
+@import "submitorder.scss";                 // 提交订单
+
 
 
 

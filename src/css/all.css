@@ -4687,7 +4687,7 @@ button.list-group-item-danger {
 
 .panel {
   margin-bottom: 20px;
-  background-color: #fff;
+  background-color: #e6e9ed;
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -4712,8 +4712,9 @@ button.list-group-item-danger {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
-  color: inherit; }
+  font-size: 14px;
+  color: rgba(70, 70, 70, 0.9);
+  font-weight: 600; }
   .panel-title > a,
   .panel-title > small,
   .panel-title > .small,
@@ -8742,6 +8743,110 @@ img {
       border: 1px solid #de3032; }
       .shopcart-cont .js-ck-r .js-btn:hover {
         background: #bd1e20; }
+
+/*提交订单*/
+.suborder-cont-ttl {
+  margin: 20px 0; }
+
+/*收货地址*/
+.suborder-cont-addr ul li {
+  margin-top: 10px; }
+  .suborder-cont-addr ul li label,
+  .suborder-cont-addr ul li span {
+    display: inline-block;
+    float: left;
+    color: #666; }
+  .suborder-cont-addr ul li label {
+    width: 80px;
+    text-align: right; }
+  .suborder-cont-addr ul li + li {
+    margin-top: 10px; }
+  .suborder-cont-addr ul li .text-info {
+    margin-left: 20px;
+    color: #337ab7; }
+
+/*添加收货地址*/
+.suborder-cont-addrlink {
+  margin: 20px 0; }
+  .suborder-cont-addrlink a {
+    padding: 5px 10px;
+    color: #666;
+    border: 1px solid #e6e9ed;
+    -webkit-transition: all .5s;
+    transition: all .5s; }
+    .suborder-cont-addrlink a:hover {
+      background: #de3032 !important;
+      color: #fff !important; }
+
+/*配送方式*/
+.suborder-cont-ps .panel-body {
+  padding: 0 15px; }
+
+.suborder-cont-ps ul li {
+  padding: 10px 0; }
+  .suborder-cont-ps ul li + li {
+    border-top: 1px solid #e6e9ed; }
+
+/**商品清单**/
+.suborder-cont-prod .panel-body {
+  padding: 0; }
+  .suborder-cont-prod .panel-body ul > li.ttl > div,
+  .suborder-cont-prod .panel-body ul > li.cont > div {
+    padding: 15px 5px;
+    border: none;
+    border-top: 1px solid #e6e9ed; }
+    .suborder-cont-prod .panel-body ul > li.ttl > div + div,
+    .suborder-cont-prod .panel-body ul > li.cont > div + div {
+      border-left: 1px solid #e6e9ed; }
+  .suborder-cont-prod .panel-body ul > li.cont > div {
+    height: 100px;
+    line-height: 70px; }
+    .suborder-cont-prod .panel-body ul > li.cont > div img {
+      width: 70px;
+      height: 70px; }
+    .suborder-cont-prod .panel-body ul > li.cont > div.op span {
+      margin: 0 5px;
+      font-weight: 200;
+      font-size: 10px; }
+  .suborder-cont-prod .panel-body ul > li.footer {
+    padding: 10px;
+    border-top: 1px solid #e6e9ed;
+    vertical-align: middle; }
+
+/*总金额项*/
+.suborder-cont-money ul > li label,
+.suborder-cont-money ul > li .span {
+  display: inline-block;
+  color: #666; }
+
+.suborder-cont-money ul > li label {
+  width: 200px;
+  text-align: right; }
+
+.suborder-cont-money ul > li .span {
+  width: 100px;
+  margin-left: 50px;
+  text-align: left; }
+
+/*寄送地址*/
+.suborder-cont-money2 {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #f8f8f8; }
+  .suborder-cont-money2 ul > li {
+    padding: 5px; }
+  .suborder-cont-money2 .l1 {
+    text-align: right; }
+  .suborder-cont-money2 .l2 label {
+    margin-left: 15px; }
+  .suborder-cont-money2 .l2 span {
+    text-align: right; }
+
+/*提交订单*/
+.suborder-cont-submit {
+  margin-top: 30px; }
+  .suborder-cont-submit .btn.btn-danger {
+    padding: 10px 40px; }
 
 .error, .seriousError {
   border: 1px red;

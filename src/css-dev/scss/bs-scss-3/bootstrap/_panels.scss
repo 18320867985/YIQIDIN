@@ -6,7 +6,7 @@
 // Base class
 .panel {
   margin-bottom: $line-height-computed;
-  background-color: $panel-bg;
+  background-color: $text-ash-3;  //$panel-bg;
   border: 1px solid transparent;
   border-radius: $panel-border-radius;
   @include box-shadow(0 1px 1px rgba(0,0,0,.05));
@@ -33,8 +33,9 @@
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: ceil(($font-size-base * 1.125));
-  color: inherit;
+  font-size:  14px;  //ceil(($font-size-base * 1.125));
+  color: $text-ash; // inherit;
+  font-weight:600 ;
 
   > a,
   > small,

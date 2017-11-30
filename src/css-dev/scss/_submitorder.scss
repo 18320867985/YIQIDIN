@@ -1,0 +1,162 @@
+/*提交订单*/
+
+.suborder-cont-ttl {
+    margin: 20px 0;
+}
+
+
+/*收货地址*/
+
+.suborder-cont-addr {
+    ul li {
+        margin-top: 10px;
+        label,
+        span {
+            display: inline-block;
+            float: left;
+            color: $text-777;
+        }
+        label {
+            width: 80px;
+            text-align: right;
+        }
+        &+li {
+            margin-top: 10px;
+        }
+        .text-info {
+            margin-left: 20px;
+            color: $brand-info;
+        }
+    }
+}
+
+
+/*添加收货地址*/
+
+.suborder-cont-addrlink {
+    margin: 20px 0;
+    a {
+        padding: 5px 10px;
+        color: $text-777;
+        border: 1px solid $text-ash-3;
+        transition: all .5s;
+        &:hover {
+            background: $text-danger !important;
+            color: #fff !important;
+        }
+    }
+}
+
+
+/*配送方式*/
+
+.suborder-cont-ps {
+    .panel-body {
+        padding: 0 15px;
+    }
+    ul li {
+        padding: 10px 0;
+        &+li {
+            border-top: 1px solid $text-ash-3;
+        }
+    }
+}
+
+
+/**商品清单**/
+
+.suborder-cont-prod {
+    .panel-body {
+        padding: 0;
+        ul>li {
+            &.ttl>div,
+            &.cont>div {
+                padding: 15px 5px;
+                border: none;
+                border-top: 1px solid $text-ash-3;
+                &+div {
+                    border-left: 1px solid $text-ash-3;
+                }
+            }
+            &.cont>div {
+                height: 100px;
+                line-height: 70px;
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
+                &.op {
+                    span {
+                        margin: 0 5px;
+                        font-weight: 200;
+                        font-size: 10px;
+                    }
+                }
+            }
+            &.footer {
+                padding: 10px;
+                border-top: 1px solid $text-ash-3;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+
+/*总金额项*/
+
+.suborder-cont-money {
+    ul {
+        >li {
+            label,
+            .span {
+                display: inline-block;
+                color: $text-777;
+            }
+            label {
+                width: 200px;
+                text-align: right;
+            }
+            .span {
+                width: 100px;
+                margin-left: 50px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+/*寄送地址*/
+
+.suborder-cont-money2 {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: $text-f8;
+    ul>li{
+        padding: 5px;
+    }
+    .l1{
+        text-align: right;
+    }
+    .l2{
+             label {
+                margin-left: 15px;
+            }
+            span {
+                
+                text-align: right;
+            } 
+    } 
+}
+
+/*提交订单*/
+    
+.suborder-cont-submit{
+    
+    margin-top: 30px;
+    .btn.btn-danger{
+        
+        padding: 10px 40px;
+    }
+}
