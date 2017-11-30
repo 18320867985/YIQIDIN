@@ -1,23 +1,111 @@
 	
-	1.<link rel="stylesheet" type="text/css" href="skins/all.css"/>//ȫ��
+	1.<link rel="stylesheet" type="text/css" href="skins/all.css"/>//全部
 		
-  	������ 
+  	或引入 
 
-	<link rel="stylesheet" type="text/css" href="skins/flat/red.css"/> ������
+	<link rel="stylesheet" type="text/css" href="skins/flat/red.css"/> 单个的
 
-	2.���� jquery �ļ� �� icheck �ļ�
+	2.引入 jquery 文件 和 icheck 文件
 
 	<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
 
 	<script src="icheck.js" type="text/javascript" charset="utf-8"></script>
 
-	3.����icheck
+	3.激活icheck
 	$(document).ready(function(){
 	
 		$('input').iCheck({
-  		  checkboxClass: 'icheckbox_square-red', //ע��square-red �� -red����Ϊ��ɫ ��-blue����Ϊ��ɫ
+  		  checkboxClass: 'icheckbox_square-red', //注意square-red 的 -red主题为红色 ，-blue主题为蓝色
  	  	 radioClass: 'iradio_square-red',
 	    	increaseArea: '20%' // optional
 		});
  
 	});
+
+});
+
+//方法
+
+将 1 和 3 输入框置为 checked 状态  code  $('#input-1, #input-3').iCheck('check');
+
+移除 1 和 3 输入框置的 checked 状态  code  $('#input-1, #input-3').iCheck('uncheck');
+
+将 2 和 4 输入框置为 disabled状态  code  $('#input-2, #input-4').iCheck('disable');
+
+移除 2 和 4 输入框置为disabled状态  code  $('#input-2, #input-4').iCheck('enable');
+
+移除iCheck样式  code  $('input').iCheck('destroy');
+
+
+回调事件
+
+iCheck提供了大量回调事件，都可以用来监听change事件。
+
+
+事件名称
+使用时机 
+
+
+ifClicked
+用户点击了自定义的输入框或与其相关联的label 
+
+ifChanged
+输入框的 checked 或 disabled 状态改变了 
+
+
+输入框的状态变为 checked 
+
+ifUnchecked
+checked 状态被移除 
+
+ifDisabled
+输入框状态变为 disabled 
+
+ifEnabled
+disabled 状态被移除 
+
+ifCreated
+输入框被应用了iCheck样式 
+
+ifDestroyed
+iCheck样式被移除 
+
+使用on()方法绑定事件：
+
+
+$('input').on('ifChecked', function(event){
+  alert(event.type + ' callback');
+});
+
+
+ifCreated 事件应该在插件初始化之前绑定。
+
+方法
+
+下面这些方法可以用来通过编程方式改变输入框状态（可以使用任何选择器）：
+
+$('input').iCheck('check'); — 将输入框的状态设置为checked
+
+$('input').iCheck('uncheck'); — 移除 checked 状态
+
+$('input').iCheck('toggle'); — toggle checked state
+
+$('input').iCheck('disable'); — 将输入框的状态设置为 disabled
+
+$('input').iCheck('enable'); — 移除 disabled 状态
+
+$('input').iCheck('update'); — apply input changes, which were done outside the plugin
+
+$('input').iCheck('destroy'); — 移除iCheck样式
+
+
+$('input').iCheck('toggle'); — toggle checked state
+
+$('input').iCheck('disable'); — 将输入框的状态设置为 disabled
+
+$('input').iCheck('enable'); — 移除 disabled 状态
+
+$('input').iCheck('update'); — apply input changes, which were done outside the plugin
+
+$('input').iCheck('destroy'); — 移除iCheck样式
+

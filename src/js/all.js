@@ -234,6 +234,9 @@ var vd = (function($) {
 								_obj2.errorMsg = _rd_msg;
 							}
 						}
+						
+						$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
+						$(p).find(".vd-req").addClass("vd-error").text(_obj2.errorMsg);
 						//  流程终止
 						return;
 					} else {
@@ -243,6 +246,8 @@ var vd = (function($) {
 						$(p).removeClass("vd-error vd-rd ");
 						$(el).removeClass("vd-error");
 						$(p).addClass("vd-ok");
+						
+					$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
 
 						// 选择了 流程以下走
 					}
@@ -3733,6 +3738,42 @@ var proddtl = function ($) {
 			}, 400);
 
 			lr_btn_ff();
+		});
+	};
+
+	return {
+		init: _init
+	};
+}(window.jQuery);
+var shopcart = function ($) {
+
+	var _init = function _init() {
+		// 全选
+		$(".ck-all").on("ifChecked", function () {
+
+			$(".shopcart-cont  .item input").iCheck('check'); //— 将输入框的状态设置为checked
+			$(".shopcart-cont  .ck-all").iCheck('check'); //— 将输入框的状态设置为checked
+		});
+
+		// 取消全选
+		$(".ck-all").on("ifUnchecked", function () {
+
+			$(".shopcart-cont  .item input").iCheck('uncheck'); //— 移除 checked 状态
+			$(".shopcart-cont  .ck-all").iCheck('uncheck'); //— 将输入框的状态设置为checked
+		});
+
+		// 子项选择
+		$(".shopcart-cont .item .ttl2 input").on("ifChecked", function () {
+
+			var p = $(this).parents(".item");
+			$(".ttl2-cont input", p).iCheck('check'); //— 将输入框的状态设置为checked
+		});
+
+		// 子项选择
+		$(".shopcart-cont .item .ttl2 input").on("ifUnchecked", function () {
+
+			var p = $(this).parents(".item");
+			$(".ttl2-cont input", p).iCheck('uncheck'); //— 将输入框的状态设置为checked
 		});
 	};
 
