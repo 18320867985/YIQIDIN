@@ -1,17 +1,17 @@
 [
 	{
 		"userName":"admin",
-		"pwd":"123456"
+		"pwd":"admin"
 		
 	},
 	{
 		"userName":"admin2",
-		"pwd":"123456"
+		"pwd":"admin"
 		
 	},
 	{
 		"userName":"admin3",
-		"pwd":"123456"
+		"pwd":"admin"
 		
 	}
 

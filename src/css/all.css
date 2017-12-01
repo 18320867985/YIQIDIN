@@ -3,6 +3,9 @@
 .bg-white {
   background: #fff; }
 
+.bg-none {
+  background: transparent !important; }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -1065,7 +1068,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: #fcfcfc; }
+  background-color: #f8f8f8; }
 
 input,
 button,
@@ -1102,7 +1105,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #fcfcfc;
+  background-color: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2064,7 +2067,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #fcfcfc; }
+    background-color: #f8f8f8; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -3592,7 +3595,7 @@ tbody.collapse.in {
         border-color: #eeeeee #eeeeee #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
-      background-color: #fcfcfc;
+      background-color: #f8f8f8;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -3646,7 +3649,7 @@ tbody.collapse.in {
     .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
     .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
     .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #fcfcfc; } }
+      border-bottom-color: #f8f8f8; } }
 
 .tab-content > .tab-pane {
   display: none; }
@@ -4330,7 +4333,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: #fcfcfc;
+  background-color: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -7209,8 +7212,8 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 /*默认样式*/
 body {
   font-size: 12px;
-  font-family: "微软雅黑","宋体";
-  background: #fcfcfc; }
+  font-family: "微软雅黑", "宋体";
+  background: #f8f8f8; }
 
 .container-12 {
   width: 1170px;
@@ -7427,7 +7430,7 @@ input:focus,
   display: none; }
 
 .v-text-index {
-  position: absolute  !important;
+  position: absolute !important;
   display: inline-block !important;
   text-indent: -99999px;
   margin: -2px !important;
@@ -7586,8 +7589,25 @@ input::-moz-placeholder {
   overflow: hidden;
   white-space: nowrap; }
 
+/*ellipsis*/
+.ellipsis {
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+/* a link*/
 a:hover {
   color: #de3032 !important; }
+
+/*clr*/
+.clr:before,
+.clr:after {
+  display: table;
+  content: " "; }
+
+.clr:after {
+  clear: both; }
 
 /*错误显示*/
 .vd-box .vd-req,
@@ -7955,7 +7975,7 @@ img {
     width: 100%;
     padding-left: 15px;
     color: #464646;
-    background: #fcfcfc;
+    background: #f8f8f8;
     border-left: 2px solid #de3032; }
   .index-discount .index-discount-br {
     margin-top: 15px;
@@ -8042,7 +8062,7 @@ img {
   .index-prodItem .ttl-1 {
     padding-top: 10px;
     padding-bottom: 5px;
-    background: #fcfcfc;
+    background: #f8f8f8;
     border-bottom: 1px solid #de3032; }
     .index-prodItem .ttl-1 h4 {
       padding-left: 15px;
@@ -8847,6 +8867,110 @@ img {
   margin-top: 30px; }
   .suborder-cont-submit .btn.btn-danger {
     padding: 10px 40px; }
+
+/* 经销商首页*/
+.header-logo .search.distri-head {
+  float: right !important;
+  height: 100px;
+  padding-top: 30px;
+  padding-left: 180px; }
+
+/*内容部分*/
+.distri-cont {
+  margin-top: 20px; }
+
+.distri-cont-l {
+  width: 200px;
+  min-height: 500px;
+  padding: 30px;
+  background: #fff; }
+  .distri-cont-l dt {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 15px;
+    font: 16px "微软雅黑";
+    font-weight: 600; }
+  .distri-cont-l dd {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+    .distri-cont-l dd + dd {
+      margin-top: 10px;
+      font-size: 14px; }
+    .distri-cont-l dd.active a {
+      color: #de3032; }
+  .distri-cont-l .logout .btn.btn-default {
+    color: #de3032;
+    border: 1px solid #bd1e20;
+    -webkit-transition: all .5s;
+    transition: all .5s; }
+    .distri-cont-l .logout .btn.btn-default:active, .distri-cont-l .logout .btn.btn-default:focus {
+      background: none; }
+    .distri-cont-l .logout .btn.btn-default:hover {
+      background: #de3032;
+      color: #fff;
+      border: 1px solid #de3032; }
+
+.distri-cont-r {
+  width: 980px;
+  min-height: 500px; }
+
+.distri-cont-r-info {
+  min-height: 120px;
+  width: 100%;
+  padding: 10px 20px;
+  background: #fff; }
+  .distri-cont-r-info .left {
+    width: 400px;
+    padding: 20px; }
+    .distri-cont-r-info .left img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%; }
+    .distri-cont-r-info .left ul {
+      margin-left: 20px;
+      width: 200px; }
+      .distri-cont-r-info .left ul .ttl {
+        font-size: 16px;
+        font-weight: 600; }
+      .distri-cont-r-info .left ul .progress-label {
+        display: block;
+        margin-right: 5px;
+        color: #337ab7;
+        font-weight: 400; }
+      .distri-cont-r-info .left ul .progress {
+        width: 80px;
+        height: 15px !important;
+        margin: 0 !important; }
+      .distri-cont-r-info .left ul .progress-span {
+        display: block;
+        margin-left: 10px; }
+      .distri-cont-r-info .left ul li p a {
+        margin-left: 5px; }
+      .distri-cont-r-info .left ul li + li {
+        margin-top: 10px; }
+  .distri-cont-r-info .right {
+    width: 540px;
+    min-height: 145px;
+    padding: 10px;
+    background: #e6e9ed; }
+    .distri-cont-r-info .right ul {
+      width: 250px;
+      height: 120px;
+      padding-left: 20px; }
+      .distri-cont-r-info .right ul label {
+        color: #666; }
+      .distri-cont-r-info .right ul li + li {
+        margin-top: 2px; }
+      .distri-cont-r-info .right ul + ul {
+        border-left: 1px solid #aab2bd; }
+      .distri-cont-r-info .right ul.u2 li.feige {
+        margin-top: 35px; }
+      .distri-cont-r-info .right ul .l2-fg {
+        margin-left: 10px; }
 
 .error, .seriousError {
   border: 1px red;

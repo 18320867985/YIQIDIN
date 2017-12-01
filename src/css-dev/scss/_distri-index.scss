@@ -1,0 +1,147 @@
+/* 经销商首页*/
+
+// 搜索框样式 
+.header-logo .search.distri-head {
+    float: right !important;
+    height: 100px;
+    padding-top: 30px;
+    padding-left: 180px;
+}
+
+
+/*内容部分*/
+
+.distri-cont {
+    margin-top: 20px;
+}
+
+// 左边ttl
+.distri-cont-l {
+    width: 200px;
+    min-height: 500px;
+    padding: 30px;
+    background: $text-white;
+    dt {
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-bottom: 15px;
+        font: 16px "微软雅黑";
+        font-weight: 600;
+    }
+    dd {
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &+dd {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        &.active {
+            a {
+                color: $text-danger;
+            }
+        }
+    }
+    // 退出按钮
+    .logout {
+        .btn.btn-default {
+            color: $text-danger;
+            border: 1px solid darken( $text-danger, 10%);
+            transition: all .5s;
+            &:active,
+            &:focus {
+                background: none;
+            }
+            &:hover {
+                background: $text-danger;
+                color: $text-white;
+                border: 1px solid $text-danger;
+            }
+        }
+    }
+}
+
+// 右边content
+.distri-cont-r {
+    width: 980px;
+    min-height: 500px;
+}
+
+// 信息内容
+.distri-cont-r-info {
+    min-height: 120px;
+    width: 100%;
+    padding: 10px 20px;
+    background: $text-white;
+    .left {
+        width: 400px;
+        padding: 20px;
+        img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        ul {
+            margin-left: 20px;
+            width: 200px;
+            .ttl {
+                font-size: 16px;
+                font-weight: 600;
+            }
+            //进度条
+            .progress-label {
+                display: block;
+                margin-right: 5px;
+                color: $brand-primary;
+                font-weight: 400;
+            }
+            .progress {
+                width: 80px;
+                height: 15px !important;
+                margin: 0 !important;
+            }
+            .progress-span {
+                display: block;
+                margin-left: 10px;
+            }
+            li p a {
+                margin-left: 5px;
+            }
+            li+li {
+                margin-top: 10px;
+            }
+        }
+    }
+    .right {
+        width: 540px;
+        min-height: 145px;
+        padding: 10px;
+        background: $text-ash-3;
+        ul {
+            width: 250px;
+            height: 120px;
+            padding-left: 20px;
+            label {
+                color: $text-777;
+            }
+            li+li {
+                margin-top: 2px;
+            }
+            &+ul {
+                border-left: 1px solid $text-ash-2;
+            }
+            &.u2 {
+                li.feige {
+                    margin-top: 35px;
+                }
+            }
+            
+            .l2-fg{
+                margin-left: 10px;
+            }
+        }
+    }
+}

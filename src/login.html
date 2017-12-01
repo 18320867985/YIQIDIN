@@ -140,12 +140,17 @@
 
 					// 验证成功
 					vd1.isSuccess(function(obj) {
-
+						
+						vd1.disabled(this); //禁用
+						//vd1.enabled(this); //激活
+						$(this).val("登录中...");
 						//alert(JSON.stringify(obj));
 						
 						// 自定义检验  
 						var userName=obj.userName;
 						var pwd=obj.pwd;
+						
+						// 下面登陆演示的
 						$.get("json/admin.json",function(data){
 							
 							var bl=false;
@@ -163,16 +168,23 @@
 								$err_obj.hide();
 								alert("登录成功");
 								
+								vd1.enabled(this); //激活
+								$(this).val("登录");
+								
+								
 							}else{
 								
 								$err_obj.hide().show("fade");
 								$err_obj.text("用户名与密码不匹配");
+								
+								vd1.enabled(this); //激活
+								$(this).val("登录");
 							}
 							
 						
-						});
+						}.bind(this));
 
-					}, 
+					}.bind(this), 
 					
 					// 错误
 					function(obj) {
