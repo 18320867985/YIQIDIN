@@ -7209,6 +7209,23 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 .icon-renren:before {
   content: ""; }
 
+.thumbnail-content {
+  overflow: hidden; }
+
+.thumbnail-allitems {
+  position: relative; }
+
+.thumbnail-item {
+  float: left !important; }
+
+.thumbnail-num {
+  position: absolute;
+  width: 50px;
+  margin: 0 auto;
+  text-align: center;
+  background: #f0f0f0;
+  background: rgba(240, 240, 240, 0.8); }
+
 /*默认样式*/
 body {
   font-size: 12px;
@@ -7266,6 +7283,9 @@ img {
   margin: 0px;
   padding: 0px;
   outline: none; }
+
+img {
+  display: inline-block; }
 
 span,
 a {
@@ -7898,16 +7918,19 @@ img {
 .index-cont-lbt-big .next {
   display: none;
   width: 40px;
-  height: 100px !important;
-  background: url(../images/btn.png) no-repeat;
+  height: 74px !important;
+  overflow: hidden;
+  background: url(../images/btn3.png) no-repeat;
   position: absolute;
   top: 50%;
-  margin-top: -50px; }
+  margin-top: -37px; }
 
 .index-cont-lbt-big .prev {
-  left: 0; }
+  left: 0;
+  background-position: 0 0 !important; }
 
 .index-cont-lbt-big .next {
+  background-position: -40px 0 !important;
   right: 0;
   background-position: right; }
 
@@ -8868,7 +8891,8 @@ img {
   .suborder-cont-submit .btn.btn-danger {
     padding: 10px 40px; }
 
-/* 经销商首页*/
+/* 经销商首
+ * 页*/
 .header-logo .search.distri-head {
   float: right !important;
   height: 100px;
@@ -8971,6 +8995,65 @@ img {
         margin-top: 35px; }
       .distri-cont-r-info .right ul .l2-fg {
         margin-left: 10px; }
+
+.distri-cont-r-more {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px 0; }
+  .distri-cont-r-more .ttl {
+    padding-left: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #464646;
+    border-left: #de3032 solid 6px; }
+  .distri-cont-r-more .btn-lf {
+    width: 50px;
+    text-align: center; }
+    .distri-cont-r-more .btn-lf .glyphicon {
+      top: 100px;
+      font-size: 24px;
+      color: #aab2bd;
+      cursor: pointer; }
+      .distri-cont-r-more .btn-lf .glyphicon:hover {
+        color: #de3032; }
+  .distri-cont-r-more .like .img-items {
+    width: 880px;
+    height: 240px;
+    background: #f8f8f8; }
+    .distri-cont-r-more .like .img-items .item {
+      display: block;
+      float: left; }
+      .distri-cont-r-more .like .img-items .item li {
+        float: left;
+        width: 220px;
+        height: 240px;
+        padding: 10px;
+        text-align: center;
+        background: #fff;
+        border: 1px solid #ddd; }
+        .distri-cont-r-more .like .img-items .item li + li {
+          border-left: none; }
+        .distri-cont-r-more .like .img-items .item li img {
+          float: none;
+          width: 160px;
+          height: 160px;
+          -webkit-transition: all .8s;
+          transition: all .8s; }
+        .distri-cont-r-more .like .img-items .item li:hover img {
+          -webkit-transform: scale(1.05);
+                  transform: scale(1.05); }
+        .distri-cont-r-more .like .img-items .item li p {
+          height: 40px;
+          line-height: 20px;
+          overflow: hidden;
+          text-align: left; }
+        .distri-cont-r-more .like .img-items .item li .price {
+          padding-right: 10px;
+          text-align: right;
+          color: #de3032; }
+          .distri-cont-r-more .like .img-items .item li .price .iconfont {
+            margin-right: -5px; }
 
 .error, .seriousError {
   border: 1px red;

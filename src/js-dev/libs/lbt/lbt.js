@@ -1,4 +1,12 @@
-		/* 首页图片轮播*/
+		/* 首页图片轮播
+		 
+		 * 				case "fade":
+						case "fold":
+						case "top":
+						case "left":
+						
+		 * */
+		
 			$(function(){
 				
 				

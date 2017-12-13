@@ -1,6 +1,15 @@
 var index = (function($) {
 
-	/* 首页图片轮播*/
+
+	 
+	 	/* 首页图片轮播
+		 * 				case "fade":
+						case "fold":
+						case "top":
+						case "left":
+					
+		 * */
+	
 	function _lbt(){
 	
 			$(".index-cont-lbt-big").hover(function() {
@@ -22,7 +31,7 @@ var index = (function($) {
 				autoPlay: true,
 				delayTime: 700,
 				autoPage: true,
-				interval:3000
+				interval:5000
 				
 			});
 	
