@@ -549,7 +549,7 @@ var vd = (function($) {
 
 				var p = $(el).parents(".vd-box");
 				$(p).removeClass("vd-error ");
-				
+				$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
 				$(p).find(".vd-remote").removeClass("vd-error").text("");
 				$(el).removeClass("vd-error");
 				$(p).addClass("vd-ok");

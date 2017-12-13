@@ -1,0 +1,42 @@
+/*发件箱*/
+
+.sendbox {
+    background: $text-white;
+    min-height: 300px;
+}
+
+// sendbox-list
+.sendbox-list {
+    
+    padding: 20px;
+    
+    // op
+    .op {
+        padding: 10px;
+         border: 1px solid #ddd;
+         border-bottom: none ;
+        a {
+            color: $brand-primary;
+            &+a {
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    
+    // table
+    
+    .table{
+        
+        th,
+        td{
+           
+           text-align: center; 
+        }
+    }
+}
+
+
+
+
+/**收件箱**/

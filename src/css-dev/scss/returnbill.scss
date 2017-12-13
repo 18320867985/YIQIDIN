@@ -1,0 +1,25 @@
+
+
+/**退货单**/
+    
+
+.returbill-list{
+    
+    margin-top: 30px;
+    background: $text-white;
+    
+    min-height: 400px;
+    .table{
+        border-bottom: 1px solid $text-ash-3;
+    }
+    td,
+    th{
+        text-align: center;
+        padding: 12px 5px !important;
+    }
+    
+    th{
+       // background: $text-ash-3;
+    }
+    
+}

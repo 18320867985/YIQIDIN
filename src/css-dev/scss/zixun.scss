@@ -1,0 +1,42 @@
+
+/**咨询与回复**/
+    
+.zixun{
+    min-height: 400px;
+     background: $text-white;
+}
+
+
+// zixun-list
+.zixun-list{
+    
+    padding: 20px;
+   
+    // ul
+    ul{
+          background:#f8f8f8;
+          border: 1px solid  $text-ash-3 ;
+        li{
+            border-right: 1px solid $text-ash-3 ;
+            float: left;
+          a{
+               display: inline-block;
+                  padding: 10px 25px;
+          }
+            
+            &.active a{
+               
+                background: $text-danger;
+                color:$text-white !important;
+            }
+        }
+    }
+    
+    //tab-content
+    .tab-content{
+        min-height: 200px;
+        padding: 10px;
+         border: 1px solid $text-ash-3;
+         border-top:none;
+    }
+}

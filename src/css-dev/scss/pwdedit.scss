@@ -1,0 +1,41 @@
+
+/**修改密码**/
+    
+.pwdedit {
+    .zixun-list{
+        padding: 0;
+      
+        
+        ul{
+            border-top:none
+        }
+        
+        .tab-content{
+            padding: 40px 20px 20px 20px;
+            min-height: 300px;
+            
+            
+            .form-group+.form-group{
+                margin-top: 30px;
+            }
+           
+            
+            //  确认密码
+              .vd-btn{
+                  
+                  background: $brand-primary;
+                  color:$text-white;
+                  
+                  &:hover{
+                        background:darken($brand-primary,10%); 
+                  }
+              }
+            .vd-btn.vd-error{
+                background: $text-ash-2 !important;
+                  color:$text-f8;
+                
+            }
+            
+        }
+    }
+}

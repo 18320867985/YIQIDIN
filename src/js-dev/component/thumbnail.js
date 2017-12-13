@@ -4,8 +4,8 @@
  * 
  * <div class=" clearfix  thumbnail-slider">
 		<!--btn-->
-		<div class="pull-left    thumbnail-btn-l">
-			<span class="glyphicon glyphicon-menu-left"></span>
+		<div class="pull-left   ">
+			<span class="glyphicon glyphicon-menu-left  thumbnail-btn-l"></span>
 		</div>
 		<div class=" pull-left thumbnail-content ">
 
@@ -40,8 +40,8 @@
 			</div>
 
 		</div>
-		<div class="pull-left  thumbnail-btn-r">
-			<span class="glyphicon glyphicon-menu-right"></span>
+		<div class="pull-left">
+			<span class="glyphicon glyphicon-menu-right thumbnail-btn-r"></span>
 		</div>
 	</div>
 
@@ -94,6 +94,7 @@
 //	
 //	
 	
+	
 	$(".thumbnail-slider").each(function(){
 				
 			var $content= $(this).find(".thumbnail-content");
@@ -113,6 +114,10 @@
 			$num_l.text(curIndex);
 			if(size<=0){
 				$num.hide();
+				$btn_l.hide();
+				$btn_r.hide();
+				
+				
 			}
 			// 设置width
 			$allitems.width(size*width);

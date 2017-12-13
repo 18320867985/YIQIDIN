@@ -1068,7 +1068,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: #f8f8f8; }
+  background-color: whitesmoke; }
 
 input,
 button,
@@ -1105,7 +1105,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #f8f8f8;
+  background-color: whitesmoke;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -2067,7 +2067,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #f8f8f8; }
+    background-color: whitesmoke; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -3595,7 +3595,7 @@ tbody.collapse.in {
         border-color: #eeeeee #eeeeee #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
-      background-color: #f8f8f8;
+      background-color: whitesmoke;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -3649,7 +3649,7 @@ tbody.collapse.in {
     .nav-tabs-justified > .active > a, .nav-tabs.nav-justified > .active > a,
     .nav-tabs-justified > .active > a:hover, .nav-tabs.nav-justified > .active > a:hover,
     .nav-tabs-justified > .active > a:focus, .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #f8f8f8; } }
+      border-bottom-color: whitesmoke; } }
 
 .tab-content > .tab-pane {
   display: none; }
@@ -4333,7 +4333,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: #f8f8f8;
+  background-color: whitesmoke;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;
@@ -7230,7 +7230,7 @@ a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, 
 body {
   font-size: 12px;
   font-family: "微软雅黑", "宋体";
-  background: #f8f8f8; }
+  background: whitesmoke; }
 
 .container-12 {
   width: 1170px;
@@ -7616,6 +7616,12 @@ input::-moz-placeholder {
   text-overflow: ellipsis;
   overflow: hidden; }
 
+.padding-l-no {
+  padding-left: 0; }
+
+.padding-r-no {
+  padding-right: 0; }
+
 /* a link*/
 a:hover {
   color: #de3032 !important; }
@@ -7998,7 +8004,7 @@ img {
     width: 100%;
     padding-left: 15px;
     color: #464646;
-    background: #f8f8f8;
+    background: whitesmoke;
     border-left: 2px solid #de3032; }
   .index-discount .index-discount-br {
     margin-top: 15px;
@@ -8085,7 +8091,7 @@ img {
   .index-prodItem .ttl-1 {
     padding-top: 10px;
     padding-bottom: 5px;
-    background: #f8f8f8;
+    background: whitesmoke;
     border-bottom: 1px solid #de3032; }
     .index-prodItem .ttl-1 h4 {
       padding-left: 15px;
@@ -8940,7 +8946,7 @@ img {
 
 .distri-cont-r {
   width: 980px;
-  min-height: 500px; }
+  min-height: 762px; }
 
 .distri-cont-r-info {
   min-height: 120px;
@@ -9009,6 +9015,7 @@ img {
     border-left: #de3032 solid 6px; }
   .distri-cont-r-more .btn-lf {
     width: 50px;
+    height: 240px;
     text-align: center; }
     .distri-cont-r-more .btn-lf .glyphicon {
       top: 100px;
@@ -9054,6 +9061,112 @@ img {
           color: #de3032; }
           .distri-cont-r-more .like .img-items .item li .price .iconfont {
             margin-right: -5px; }
+
+/**对账单**/
+.duizhang {
+  min-height: 762px;
+  background: #fff; }
+
+.duizhang-ttl {
+  padding: 15px 20px;
+  color: #de3032;
+  border-bottom: 2px solid #de3032; }
+
+.duizhang-form {
+  padding: 30px 20px; }
+  .duizhang-form label,
+  .duizhang-form .form-control {
+    display: inline-block;
+    float: left;
+    vertical-align: middle; }
+  .duizhang-form select {
+    line-height: 28px; }
+  .duizhang-form label {
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px; }
+  .duizhang-form .form-control {
+    margin: 0 20px 0 10px;
+    width: 200px; }
+  .duizhang-form .btn {
+    padding-left: 20px;
+    padding-right: 20px; }
+
+/*发件箱*/
+.sendbox {
+  background: #fff;
+  min-height: 300px; }
+
+.sendbox-list {
+  padding: 20px; }
+  .sendbox-list .op {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-bottom: none; }
+    .sendbox-list .op a {
+      color: #337ab7; }
+      .sendbox-list .op a + a {
+        margin-left: 10px; }
+  .sendbox-list .table th,
+  .sendbox-list .table td {
+    text-align: center; }
+
+/**收件箱**/
+/**咨询与回复**/
+.zixun {
+  min-height: 400px;
+  background: #fff; }
+
+.zixun-list {
+  padding: 20px; }
+  .zixun-list ul {
+    background: #f8f8f8;
+    border: 1px solid #e6e9ed; }
+    .zixun-list ul li {
+      border-right: 1px solid #e6e9ed;
+      float: left; }
+      .zixun-list ul li a {
+        display: inline-block;
+        padding: 10px 25px; }
+      .zixun-list ul li.active a {
+        background: #de3032;
+        color: #fff !important; }
+  .zixun-list .tab-content {
+    min-height: 200px;
+    padding: 10px;
+    border: 1px solid #e6e9ed;
+    border-top: none; }
+
+/**退货单**/
+.returbill-list {
+  margin-top: 30px;
+  background: #fff;
+  min-height: 400px; }
+  .returbill-list .table {
+    border-bottom: 1px solid #e6e9ed; }
+  .returbill-list td,
+  .returbill-list th {
+    text-align: center;
+    padding: 12px 5px !important; }
+
+/**修改密码**/
+.pwdedit .zixun-list {
+  padding: 0; }
+  .pwdedit .zixun-list ul {
+    border-top: none; }
+  .pwdedit .zixun-list .tab-content {
+    padding: 40px 20px 20px 20px;
+    min-height: 300px; }
+    .pwdedit .zixun-list .tab-content .form-group + .form-group {
+      margin-top: 30px; }
+    .pwdedit .zixun-list .tab-content .vd-btn {
+      background: #337ab7;
+      color: #fff; }
+      .pwdedit .zixun-list .tab-content .vd-btn:hover {
+        background: #286090; }
+    .pwdedit .zixun-list .tab-content .vd-btn.vd-error {
+      background: #aab2bd !important;
+      color: #f8f8f8; }
 
 .error, .seriousError {
   border: 1px red;

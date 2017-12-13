@@ -593,7 +593,7 @@ var vd = (function($) {
 
 				var p = $(el).parents(".vd-box");
 				$(p).removeClass("vd-error ");
-				
+				$(p).find(".vd-req,.vd-pattern,.vd-remote,.vd-compare").removeClass("vd-error");
 				$(p).find(".vd-remote").removeClass("vd-error").text("");
 				$(el).removeClass("vd-error");
 				$(p).addClass("vd-ok");
@@ -3270,7 +3270,6 @@ var scroll = function ($) {
 	};
 }(window.jQuery || window.Zepto);
 
-
 /*单个按钮组件
  * 
  * 
@@ -3441,8 +3440,8 @@ var scroll = function ($) {
  * 
  * <div class=" clearfix  thumbnail-slider">
 		<!--btn-->
-		<div class="pull-left    thumbnail-btn-l">
-			<span class="glyphicon glyphicon-menu-left"></span>
+		<div class="pull-left   ">
+			<span class="glyphicon glyphicon-menu-left  thumbnail-btn-l"></span>
 		</div>
 		<div class=" pull-left thumbnail-content ">
 
@@ -3477,8 +3476,8 @@ var scroll = function ($) {
 			</div>
 
 		</div>
-		<div class="pull-left  thumbnail-btn-r">
-			<span class="glyphicon glyphicon-menu-right"></span>
+		<div class="pull-left">
+			<span class="glyphicon glyphicon-menu-right thumbnail-btn-r"></span>
 		</div>
 	</div>
 
@@ -3530,6 +3529,7 @@ var scroll = function ($) {
 	//	
 	//	
 
+
 	$(".thumbnail-slider").each(function () {
 
 		var $content = $(this).find(".thumbnail-content");
@@ -3549,6 +3549,8 @@ var scroll = function ($) {
 		$num_l.text(curIndex);
 		if (size <= 0) {
 			$num.hide();
+			$btn_l.hide();
+			$btn_r.hide();
 		}
 		// 设置width
 		$allitems.width(size * width);
@@ -3877,6 +3879,36 @@ var proddtl = function ($) {
 			}, 400);
 
 			lr_btn_ff();
+		});
+	};
+
+	return {
+		init: _init
+	};
+}(window.jQuery);
+
+
+var sendbox = function () {
+
+	var _init = function _init() {
+
+		// icheckbox_flat
+		$('input').iCheck({
+			checkboxClass: 'icheckbox_flat-red',
+			radioClass: 'iradio_flat-red',
+			increaseArea: '20%' // optional
+		});
+
+		// 全选
+		$(".ck-all").on("click", function () {
+
+			$(".sendbox-list .table  input[type=checkbox]").iCheck('check'); //— 将输入框的状态设置为checked
+		});
+
+		// 取消全选
+		$(".ck-unall").on("click", function () {
+
+			$(".sendbox-list .table  input[type=checkbox]").iCheck('uncheck'); //— 移除 checked 状态
 		});
 	};
 

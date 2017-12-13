@@ -1,0 +1,54 @@
+
+/**对账单**/
+   
+ //  wrap    
+.duizhang{
+    min-height: 762px;
+    background: $text-white;
+    
+}
+
+
+// duizhang-ttl
+.duizhang-ttl{
+    padding: 15px 20px;
+  color:$text-danger; 
+  border-bottom: 2px solid $text-danger; 
+}
+
+
+// duizhang-form
+.duizhang-form{
+    
+    padding: 30px 20px;
+    
+     label,
+     .form-control{
+       display: inline-block;
+       float: left;
+        vertical-align:  middle;
+        
+    }
+    
+    select{
+     line-height: 28px;   
+    }
+    
+    label{
+        height: 34px;
+        line-height: 34px;
+      font-size: 14px;
+    }
+    
+   
+    .form-control{
+       
+       margin:  0 20px 0 10px;
+        width:200px;
+    }
+   .btn{
+       
+       padding-left:20px ;
+        padding-right:20px ;
+   }
+}
