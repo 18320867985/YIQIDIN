@@ -7622,6 +7622,10 @@ input::-moz-placeholder {
 .padding-r-no {
   padding-right: 0; }
 
+.padding-lr-no {
+  padding-left: 0;
+  padding-right: 0; }
+
 /* a link*/
 a:hover {
   color: #de3032 !important; }
@@ -7634,6 +7638,9 @@ a:hover {
 
 .clr:after {
   clear: both; }
+
+button.close {
+  outline: none !important; }
 
 /*错误显示*/
 .vd-box .vd-req,
@@ -9167,6 +9174,113 @@ img {
     .pwdedit .zixun-list .tab-content .vd-btn.vd-error {
       background: #aab2bd !important;
       color: #f8f8f8; }
+
+/**给管理员发信息**/
+.sendinfo {
+  min-height: 300px;
+  background: #fff; }
+
+.sendinfo-form {
+  padding: 20px 30px; }
+  .sendinfo-form p {
+    margin-top: 10px;
+    margin-left: 100px;
+    font-size: 14px; }
+  .sendinfo-form form {
+    margin-top: 50px; }
+  .sendinfo-form .form-group + .form-group {
+    margin-top: 30px; }
+  .sendinfo-form .form-group label {
+    font-size: 14px;
+    text-align: right;
+    color: #464646; }
+  .sendinfo-form .form-group textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 250px; }
+
+/**收货地址**/
+.address {
+  min-height: 500px;
+  padding-bottom: 20px;
+  background: #fff; }
+
+.address-list {
+  padding: 10px; }
+  .address-list h4.ttl {
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    background: #e6e9ed; }
+  .address-list ul {
+    padding: 20px;
+    border: 1px solid #e6e9ed; }
+    .address-list ul label,
+    .address-list ul span {
+      display: inline-block;
+      font-size: 14px; }
+    .address-list ul label {
+      width: 100px;
+      padding-right: 5px;
+      text-align: right; }
+    .address-list ul li .df {
+      margin-left: 10px; }
+    .address-list ul li + li {
+      margin-top: 10px; }
+    .address-list ul.active .df {
+      color: #337ab7; }
+      .address-list ul.active .df:hover {
+        color: #337ab7 !important; }
+    .address-list ul + ul {
+      border-top: none; }
+
+.address-btn {
+  margin-top: 30px; }
+  .address-btn button {
+    padding: 8px 30px;
+    margin-right: 20px;
+    font-size: 14px;
+    border: 1px solid #e6e9ed;
+    border-radius: 0;
+    background: #fff;
+    outline: none;
+    -webkit-transition: all .6s;
+    transition: all .6s; }
+    .address-btn button:hover {
+      color: #fff;
+      border: 1px solid #de3032;
+      background: #de3032; }
+  .address-btn span {
+    font-size: 14px; }
+  .address-btn strong {
+    margin: 0 3px; }
+
+.address .modal select {
+  line-height: 26px; }
+
+.address .modal .other {
+  position: absolute;
+  left: -13px;
+  top: 33px;
+  color: #666; }
+
+.no-rgba .modal {
+  width: 600px !important;
+  margin-left: auto;
+  margin-right: auto; }
+
+/**开票单位**/
+.kaipiao {
+  min-height: 300px; }
+
+.kaipiao-list {
+  padding: 20px 10px; }
+  .kaipiao-list table td, .kaipiao-list table th {
+    text-align: center; }
+  .kaipiao-list table th {
+    background: #e6e9ed; }
 
 .error, .seriousError {
   border: 1px red;

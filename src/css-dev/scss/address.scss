@@ -1,0 +1,103 @@
+/**收货地址**/
+
+.address {
+    min-height: 500px;
+    padding-bottom: 20px;
+    background: $text-white;
+}
+
+// address-list
+.address-list {
+    padding: 10px;
+    h4.ttl {
+        padding: 10px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #333;
+        background: $text-ash-3;
+    }
+    ul {
+        padding: 20px;
+        border: 1px solid $text-ash-3;
+        label,
+        span {
+            display: inline-block;
+            font-size: 14px;
+        }
+        label {
+            width: 100px;
+            padding-right: 5px;
+            text-align: right;
+        }
+        li {
+            .df {
+                margin-left: 10px;
+            }
+            &+li {
+                margin-top: 10px;
+            }
+        }
+        &.active .df {
+            color: $brand-primary;
+            &:hover {
+                color: $brand-primary !important;
+            }
+        }
+        &+ul {
+            border-top: none;
+        }
+    }
+}
+
+// address-btn
+.address-btn {
+    margin-top: 30px;
+    button {
+        padding: 8px 30px;
+        margin-right: 20px;
+        font-size: 14px;
+        border: 1px solid $text-ash-3;
+        border-radius: 0;
+        background: $text-white;
+        outline: none;
+        transition: all .6s;
+        &:hover {
+            color: $text-white;
+            border: 1px solid $text-danger;
+            background: $text-danger;
+        }
+    }
+    span {
+        font-size: 14px;
+    }
+    strong {
+        margin: 0 3px;
+    }
+}
+
+.address {
+    
+    .modal{
+        select{
+            line-height: 26px;
+        }
+        
+        // 或
+        .other{
+            position: absolute;
+                left: -13px;
+                top: 33px;
+                color:$text-777;
+        }
+    }
+    
+}
+
+
+// ie8
+.no-rgba .modal{
+    
+    width: 600px !important;
+    margin-left :auto;
+    margin-right:  auto;
+}

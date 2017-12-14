@@ -483,6 +483,11 @@ input::-moz-placeholder {
     padding-right: 0;
 }
 
+.padding-lr-no{
+    padding-left: 0;
+    padding-right: 0;
+}
+
 
 /* a link*/
 
@@ -501,4 +506,9 @@ a:hover {
 
 .clr:after {
     clear: both;
+}
+
+//
+button.close{
+    outline: none !important;
 }

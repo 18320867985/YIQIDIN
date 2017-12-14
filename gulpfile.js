@@ -69,7 +69,7 @@ var paths = {
 
 		"src/js-dev/libs/prefix-css3.min.js", // pc端 自动补全css3前缀 
 		
-		//"src/js-dev/libs/modernizr/modernizr-2.6.2.min.js",  // modernizr  检测css3和h5
+		"src/js-dev/libs/modernizr/modernizr-2.6.2.min.js",  // modernizr  检测css3和h5
 		
 		"src/js-dev/libs/jq/jquery-1.11.0.min.js",  // jquery.js
 		

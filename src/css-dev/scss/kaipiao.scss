@@ -1,0 +1,24 @@
+
+/**开票单位**/
+    
+.kaipiao{
+    
+min-height: 300px;
+}
+
+// kaipiao-list
+
+.kaipiao-list{
+    padding: 20px 10px;
+    
+    table{
+      
+        td,th{
+            text-align: center;
+        }
+        
+        th{
+            background: $text-ash-3;;
+        }
+    }
+}

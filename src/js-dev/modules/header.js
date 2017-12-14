@@ -1,5 +1,6 @@
 +(function() {
 
+
 	obj = {
 		// 头部菜单折叠
 		setMenu: function setMenu() {
