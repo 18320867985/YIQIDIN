@@ -1,0 +1,37 @@
+
+/**基本信息**/
+    
+.baseinfo{
+    
+
+}
+
+// baseinfo-form
+.baseinfo-form{
+    margin-top: 30px;
+    padding-bottom:20px ;
+    
+    label{
+        font-size: 14px;
+    }
+    
+    .radio{
+     
+        label+label{
+            margin-left: 15px;
+        }
+        
+     
+    }
+    .select-big{
+        
+           select{
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+    }
+    
+    .form-group+.form-group{
+        margin-top: 25px;
+    }
+}
