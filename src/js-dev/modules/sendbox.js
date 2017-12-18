@@ -15,14 +15,14 @@ var sendbox=(function(){
 			// 全选
 				$(".ck-all").on("click",function(){
 					
-					$(".sendbox-list .table  input[type=checkbox]").iCheck('check'); //— 将输入框的状态设置为checked
+					$(" .table  input[type=checkbox]").iCheck('check'); //— 将输入框的状态设置为checked
 					
 				});
 				
 				// 取消全选
 				$(".ck-unall").on("click",function(){
 					
-					$(".sendbox-list .table  input[type=checkbox]").iCheck('uncheck'); //— 移除 checked 状态
+					$(".table  input[type=checkbox]").iCheck('uncheck'); //— 移除 checked 状态
 				});
 				
 			
@@ -32,4 +32,4 @@ var sendbox=(function(){
 			init:_init
 		}
 	
-})(window.jQuery)
+})(window.jQuery);

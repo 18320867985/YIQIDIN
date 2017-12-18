@@ -7642,6 +7642,9 @@ a:hover {
 button.close {
   outline: none !important; }
 
+.iconfont.renminbi {
+  margin-right: -5px; }
+
 /*错误显示*/
 .vd-box .vd-req,
 .vd-box .vd-pattern,
@@ -9292,9 +9295,73 @@ img {
     margin-left: 15px; }
   .baseinfo-form .select-big select {
     padding-left: 3px;
-    padding-right: 3px; }
+    padding-right: 3px;
+    line-height: 26px; }
   .baseinfo-form .form-group + .form-group {
     margin-top: 25px; }
+
+/*收藏夹*/
+.shoucan-ttl {
+  padding: 10px;
+  border: 1px solid #e6e9ed; }
+  .shoucan-ttl label {
+    padding: 0;
+    margin: 0;
+    margin-left: 10px;
+    font-size: 14px; }
+  .shoucan-ttl a {
+    padding: 3px 8px;
+    border: 1px solid #e6e9ed;
+    background: #f8f8f8; }
+
+.search-table {
+  margin-top: 30px;
+  padding-bottom: 10px; }
+  .search-table > .op {
+    padding: 15px 20px;
+    border: 1px solid #e6e9ed;
+    border-bottom: none; }
+    .search-table > .op a {
+      color: #337ab7; }
+      .search-table > .op a + a {
+        margin-left: 10px; }
+  .search-table .table th {
+    text-align: center;
+    background: #e6e9ed; }
+  .search-table .table td {
+    text-align: center; }
+    .search-table .table td img {
+      width: 120px;
+      height: 140px; }
+    .search-table .table td .ck {
+      margin-top: 60px; }
+    .search-table .table td.xx {
+      padding: 0 20px;
+      text-align: left; }
+      .search-table .table td.xx h4 {
+        margin-top: 20%;
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: left !important; }
+      .search-table .table td.xx p {
+        width: 100%;
+        height: 40px;
+        line-height: 20px;
+        white-space: normal;
+        overflow: hidden;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px; }
+    .search-table .table td .price {
+      margin-top: 55px; }
+      .search-table .table td .price span {
+        font-size: 16px; }
+    .search-table .table td .op {
+      margin-top: 55px; }
+      .search-table .table td .op a {
+        color: #666; }
+      .search-table .table td .op a + a {
+        margin-left: 8px; }
 
 .error, .seriousError {
   border: 1px red;

@@ -3168,6 +3168,39 @@ common = function ($) {
 
 	};
 }(window.jQuery || window.Zepto);
+/*
+ * 默认js
+ * 添加 class="bs-date " 
+	<input type="text" class="form-control bs-date " value="" placeholder="订单开始时间" />
+ * 
+ */
+
+var bsDate = function ($) {
+
+	var _init = function _init() {
+		// bs 日历插件
+		$('.bs-date').datetimepicker({
+
+			format: "yyyy-mm-dd  ", //'yyyy-mm-dd hh:ii:ss'
+			showMeridian: true,
+			autoclose: true,
+			todayBtn: true,
+			minView: 3 //选择日期
+			//forceParse :true  //转换格式
+
+		});
+
+		//日期不准输入
+		$('.bs-date').focus(function () {
+
+			$(this).blur();
+		});
+	};
+
+	return {
+		init: _init
+	};
+}(window.jQuery);
 
 /*
 					 滚动监听
@@ -3388,6 +3421,7 @@ var scroll = function ($) {
 		$(this).trigger("radio_click", [this]);
 	});
 }(window.jQuery || window.Zepto);
+
 
 /*
 
@@ -3947,13 +3981,13 @@ var sendbox = function () {
 		// 全选
 		$(".ck-all").on("click", function () {
 
-			$(".sendbox-list .table  input[type=checkbox]").iCheck('check'); //— 将输入框的状态设置为checked
+			$(" .table  input[type=checkbox]").iCheck('check'); //— 将输入框的状态设置为checked
 		});
 
 		// 取消全选
 		$(".ck-unall").on("click", function () {
 
-			$(".sendbox-list .table  input[type=checkbox]").iCheck('uncheck'); //— 移除 checked 状态
+			$(".table  input[type=checkbox]").iCheck('uncheck'); //— 移除 checked 状态
 		});
 	};
 

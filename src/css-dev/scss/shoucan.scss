@@ -1,0 +1,92 @@
+/*收藏夹*/
+
+//.shoucan{
+// 
+//}
+//shoucan-ttl
+.shoucan-ttl {
+    padding: 10px;
+    border: 1px solid $text-ash-3;
+    label {
+        padding: 0;
+        margin: 0;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    a {
+        padding: 3px 8px;
+        border: 1px solid $text-ash-3;
+        background: $text-f8;
+    }
+}
+
+//search-table
+.search-table {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    >.op {
+        padding: 15px 20px;
+        border: 1px solid $text-ash-3;
+        border-bottom: none;
+        a {
+            color: $brand-primary;
+            &+a {
+                margin-left: 10px;
+            }
+        }
+    }
+    .table {
+        th {
+            text-align: center;
+            background: $text-ash-3;
+        }
+        td {
+            text-align: center;
+            $h: 140px;
+            // img 商品图片
+            img {
+                width: 120px;
+                height: $h;
+            }
+            // input
+            .ck {
+                margin-top: ($h/2)-10;
+            }
+            //info 商品信息
+            &.xx {
+                padding: 0 20px;
+                text-align: left;
+                h4 {
+                    margin-top: 20%;
+                    margin-bottom: 10px;
+                    width: 100%;
+                    text-align: left !important;
+                }
+                p {
+                    width: 100%;
+                    height: 40px;
+                    line-height: 20px;
+                    white-space: normal;
+                    overflow: hidden;
+                    overflow-y: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 14px;
+                }
+            }
+            //price 商品单价
+            .price {
+                margin-top: ($h/2)-15;
+                span {
+                    font-size: 16px;
+                }
+            }
+            .op {
+                margin-top: ($h/2)-15;
+                a{ color:$text-777;}
+                a+a {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}

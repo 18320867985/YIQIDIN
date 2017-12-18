@@ -14,6 +14,8 @@
 
 @import "df.scss";                           // default scss
 
+@import "common.scss";                        // 公共的 scss
+
 @import "vd.scss";                           // 验证   scss
     
 @import "header.scss";                       // header
@@ -53,6 +55,8 @@
 @import "kaipiao.scss";                    // 开票单位
 
 @import "baseinfo.scss";                    // 基本信息
+
+@import "shoucan.scss";                    // 收藏夹
 
 
 
