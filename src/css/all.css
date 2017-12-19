@@ -9013,7 +9013,6 @@ img {
         margin-left: 10px; }
 
 .distri-cont-r-more {
-  margin-top: 30px;
   background: #fff;
   padding: 20px 0; }
   .distri-cont-r-more .ttl {
@@ -9071,6 +9070,15 @@ img {
           color: #de3032; }
           .distri-cont-r-more .like .img-items .item li .price .iconfont {
             margin-right: -5px; }
+
+/**
+ *  iframe parent-window   
+ * **/
+.parent-window {
+  width: 980px;
+  min-height: 500px;
+  border: none;
+  overflow: hidden; }
 
 /**对账单**/
 .duizhang {

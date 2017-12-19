@@ -117,6 +117,22 @@ var bsDate = function ($) {
 		init: _init
 	};
 }(window.jQuery);
+/**
+ * iframe
+ * **/
+
+var iframe = function ($) {
+
+	// 设置iframe 高度
+	var _setHeight = function _setHeight() {
+		var windows_h = $(document).height() + 50;
+		$(window.parent.document).find(".parent-window").css("height", windows_h);
+	};
+
+	return {
+		setHeight: _setHeight
+	};
+}(window.jQuery);
 
 /*
 					 滚动监听
@@ -338,6 +354,24 @@ var scroll = function ($) {
 	});
 }(window.jQuery || window.Zepto);
 
+// 默认js
+
++function () {
+
+	// 点击样式 
+	$(".distri-cont-l dd a").on("click", function (event) {
+
+		event.preventDefault();
+		$(".distri-cont-l dd ").removeClass("active");
+		$(this).closest("dd").addClass("active");
+		var _src = $(this).attr("href");
+		$(".parent-window").attr("src", _src);
+
+		$('html,body').animate({
+			scrollTop: 0
+		}, 400);
+	});
+}(window.jQuery);
 
 /*
 
