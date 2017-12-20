@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>收藏夹</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" href="css/icheck/skins/flat/red.css" />
+	</head>
+
+	<body>
+
+		<div class="shoucan bg-white">
+			<h4 class="duizhang-ttl">收藏夹</h4>
+
+			<!--search-txt-->
+			<div class="shoucan-serach">
+				<form class="duizhang-form " action="">
+
+					<div class="form-group">
+
+						<label for="search">关键字:</label>
+
+						<input class="form-control rd-no" type="search" name="" id="search" value="" placeholder="输入关键字" />
+
+						<input class="btn btn-primary  rd-no" type="submit" name="" id="" value="查询" />
+
+					</div>
+
+				</form>
+			</div>
+			<!--search-title-->
+			<div class="shoucan-ttl">
+				<label for="">标签筛选：</label>
+				<a href="javascript:;">不限</a>
+			</div>
+
+			<!--search-table-->
+			<div class="search-table">
+				<!--操作-->
+				<div class="op">
+					<a class="ck-all" href="javascript:;">全选</a>
+					<a class="ck-unall" href="javascript:;">反选</a>
+					<a class="del-all" href="javascript:;">删除选定</a>
+				</div>
+
+				<table class="table table-bordered table-hover">
+
+					<!--header-->
+					<tr>
+						<th class="col-xs-1">选择</th>
+						<th class="col-xs-3">商品图片</th>
+						<th class="col-xs-3">商品信息</th>
+						<th class="col-xs-2">价格</th>
+						<th class="col-xs-3">操作</th>
+					</tr>
+
+					<!--content--->
+					<tr>
+						<td class="col-xs-1">
+							<div class="ck">
+								<input type="checkbox" name="" id="" value="" />
+							</div>
+
+						</td>
+						<td class="col-xs-3  overflow-3">
+
+							<img src="images/prod-1.png" alt="120*140" />
+
+						</td>
+						<td class="col-xs-3  overflow-3 xx">
+							<h4>若优能奶粉</h4>
+
+							<p>呵护宝宝成长 海外进口品质呵护宝宝成长 海外进口品质呵护宝宝成长 海外进口品质 呵护宝宝成长 海外进口品质呵护宝宝成长 海外进口品质呵护宝宝成长 海外进口品质
+							</p>
+
+						</td>
+						<td class="col-xs-2  overflow-2 price">
+
+							<div class="price text-danger">
+								<span class=" iconfont  renminbi "></span>
+								<span>1500.00</span>
+							</div>
+						</td>
+						<td class="col-xs-3  overflow-3 op">
+							<div class="op">
+								<a class="text-primary" href="javascript:;">购买</a>
+								<a class="text-primary" href="javascript:;">删除</a>
+								<a class="text-primary" href="javascript:;">编辑</a>
+							</div>
+
+						</td>
+					</tr>
+					<tr>
+						<td class="col-xs-1">
+							<div class="ck">
+								<input type="checkbox" name="" id="" value="" />
+							</div>
+
+						</td>
+						<td class="col-xs-3  overflow-3">
+
+							<img src="images/prod-1.png" alt="120*140" />
+
+						</td>
+						<td class="col-xs-3  overflow-3 xx">
+							<h4>若优能奶粉</h4>
+
+							<p>呵护宝宝成长 海外进口品质呵护宝宝成长 海外进口品质呵护宝宝成长 海外进口品质 呵护宝宝成长 海外进口品质呵护宝宝成长 海外进口品质呵护宝宝成长 海外进口品质
+							</p>
+
+						</td>
+						<td class="col-xs-2  overflow-2 price">
+
+							<div class="price text-danger">
+								<span class=" iconfont  renminbi "></span>
+								<span>1500.00</span>
+							</div>
+						</td>
+						<td class="col-xs-3  overflow-3 op">
+							<div class="op">
+								<a class="text-primary" href="javascript:;">购买</a>
+								<a class="text-primary" href="javascript:;">删除</a>
+								<a class="text-primary" href="javascript:;">编辑</a>
+							</div>
+
+						</td>
+					</tr>
+
+				</table>
+
+			</div>
+
+		</div>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="css/icheck/icheck.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--[if lte IE 8]>
+			<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			$(function() {
+
+				//设置iframe 高度
+				iframe.setHeight();
+
+				// page init
+				sendbox.init();
+
+				// 选定删除
+				$(".del-all").on("click", function() {
+					var $list = $(".table  input[type=checkbox]:checked");
+					if($list.length === 0) {
+						alert("没有选择到数据");
+						return;
+					}
+					if(confirm("是否要删除数据？")) {
+						$list.each(function() {
+							$(this).parents("tr").remove();
+
+						});
+					}
+				});
+
+			})
+		</script>
+	</body>
+
+</html>

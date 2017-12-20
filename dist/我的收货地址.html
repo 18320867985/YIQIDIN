@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>我的收货地址</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+	</head>
+
+	<body>
+
+		<div class="address">
+
+			<h4 class="duizhang-ttl">我的收货地址</h4>
+
+			<div class="address-list">
+				<h4 class="ttl">收货地址</h4>
+				<div class="address-list-box">
+					<ul class="active">
+						<li>
+							<label for="">收货人:</label>
+							<span>张**</span>
+							<a class="df  active" href="javascript:;">已设为默认</a>
+						</li>
+						<li>
+							<label for="">所在地区:</label>
+							<span>广东省深圳市福田区</span>
+
+						</li>
+
+						<li>
+							<label for="">地址:</label>
+							<span>沙头角xxx街</span>
+
+						</li>
+
+						<li>
+							<label for="">手机:</label>
+							<span>15899998888</span>
+
+						</li>
+
+					</ul>
+
+					<ul>
+
+						<li>
+							<label for="">所在地区:</label>
+							<span>张**</span>
+							<a class="df text-muted" href="javascript:;">设置为默认</a>
+						</li>
+
+						<li>
+							<label for="">所在地区:</label>
+							<span>广东省深圳市福田区</span>
+
+						</li>
+
+						<li>
+							<label for="">地址:</label>
+							<span>沙头角xxx街</span>
+
+						</li>
+
+						<li>
+							<label for="">手机:</label>
+							<span>15899998888</span>
+
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="address-btn">
+
+					<button class="btn" type="button" data-toggle="modal" data-target="#modal1">新增收货地址</button>
+
+					<span class="">
+											你已经添加了<strong class="text-success">2</strong>个收货地址,
+											最多添加<strong class="text-success">5</strong>个收货地址.
+											
+										</span>
+
+				</div>
+
+				<!--modal 弹出框-->
+				<div class="modal fade" id="modal1" data-backdrop="false">
+					<div class="modal-dialog modal-md">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													 	<span aria-hidden="true">&times;</span>
+													 </button>
+								<h4 class="modal-title">添加收货地址</h4>
+							</div>
+							<div class="modal-body">
+								<form class="form-address" action="" novalidate="novalidate">
+
+									<div class="form-group vd-box">
+										<label for="">收货人：</label>
+										<input class="form-control rd-no vd-item" type="text" placeholder="==收货人==" />
+
+									</div>
+									<div class="form-group vd-box">
+										<label for="">所在地区：</label>
+										<input class="vd-item" type="hidden" name="address" />
+										<div class="row">
+											<div class="col-xs-3">
+												<select class="form-control rd-no" name="" id="address_1">
+													<option value="">省区</option>
+
+												</select>
+											</div>
+											<div class="col-xs-3">
+												<select class="form-control rd-no" name="" id="address_2">
+													<option value="">市区</option>
+												</select>
+											</div>
+
+											<div class="col-xs-3">
+												<select class="form-control rd-no" name="" id="address_3">
+													<option value="">县城</option>
+												</select>
+											</div>
+
+										</div>
+
+									</div>
+
+									<div class="form-group vd-box">
+										<label for="">详细地址：</label>
+										<input class="form-control rd-no vd-item" type="text" placeholder="==详细地址==" />
+
+									</div>
+
+									<div class="form-group clearfix vd-box">
+										<div class="col-xs-6 clearfix padding-l-no">
+
+											<label for="">手机号码：</label>
+											<input class="form-control rd-no vd-item" type="text" placeholder="==手机号码==" />
+										</div>
+
+										<div class="col-xs-6 clearfix padding-lr-no  relative">
+											<span class="other">或</span>
+											<label for="">电话号码：</label>
+											<input class="form-control rd-no" type="text" placeholder="==电话号码==" />
+										</div>
+
+									</div>
+
+									<div class="form-group">
+										<label for="">邮政编码：</label>
+										<input class="form-control rd-no" type="text" placeholder="==邮政编码==" />
+
+									</div>
+
+									<div class="form-group clearfix">
+
+										<div class="col-xs-2 padding-l-no ">
+
+											<button class="btn  btn-primary rd-no vd-btn" type='button'>添加收货地址</button>
+										</div>
+
+										<div class="col-xs-2 col-xs-offset-1 ">
+											<input class="btn  btn-primary rd-no " type="reset" value="清空收货地址" />
+										</div>
+
+									</div>
+
+								</form>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--[if lte IE 8]>
+			<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
+			<script src="respond.min.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			$(function() {
+				//设置iframe 高度
+				iframe.setHeight();
+				
+				// 三级联动地址
+				threeAddress.init();
+
+			});
+		</script>
+	</body>
+
+</html>

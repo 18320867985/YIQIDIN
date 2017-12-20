@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>基本信息</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<link rel="stylesheet" type="text/css" href="css/bs-date/css/bootstrap-datetimepicker.min.css" />
+	</head>
+
+	<body>
+
+		<div class="baseinfo bg-white">
+			<h4 class="duizhang-ttl">基本信息</h4>
+
+			<!--form-->
+			<form class="baseinfo-form form-horizontal" novalidate="novalidate">
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="txt_ttl">名称:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no" type="text" name="" id="txt_ttl" value="" placeholder="==名称==" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="txt-emain"><span class="text-danger">*</span>电子邮件:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no" type="text" name="" id="txt-emain" value="" placeholder="==电子邮件==" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  padding-r-no-right padding-r-no" for="">性别:</label>
+					<div class="col-xs-4">
+						<div class="radio">
+							<label> <input type="radio" name="sex"  /> 男</label>
+							<label> <input type="radio" name="sex" /> 女</label>
+							<label> <input type="radio" name="sex" /> 保密</label>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="">生日:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no bs-date" type="text" name="" id="" value="" placeholder="==选择生日==" />
+					</div>
+				</div>
+
+				<div class="form-group select-big ">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="">详细地址:</label>
+
+					<div class="col-xs-4">
+
+						<div class="row">
+							<div class="col-xs-4 padding-r-no">
+								<select class="form-control rd-no" name="" id="address_1">
+									<option value="">省区</option>
+
+								</select>
+							</div>
+							<div class="col-xs-4 padding-r-no">
+								<select class="form-control rd-no" name="" id="address_2">
+									<option value="">市区</option>
+								</select>
+							</div>
+
+							<div class="col-xs-4 padding-r-no">
+								<select class="form-control rd-no " name="" id="address_3">
+									<option value="">县城</option>
+								</select>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="">街道地址:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no" type="text" name="" id="" value="" placeholder="==街道地址==" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="">旺旺号码:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no" type="text" name="" id="" value="" placeholder="==旺旺号码==" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="">QQ号码:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no" type="text" name="" id="" value="" placeholder="==QQ号码==" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="">微信号码:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no" type="text" name="" id="" value="" placeholder="==微信号码==" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="">电话号码:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no" type="text" name="" id="" value="" placeholder="==电话号码==" />
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-xs-2 control-label  text-right padding-r-no" for="">手机号码:</label>
+					<div class="col-xs-4 padding-r-no">
+						<input class="form-control rd-no" type="text" name="" id="" value="" placeholder="==手机号码==" />
+					</div>
+				</div>
+
+				<div class="form-group">
+
+					<div class="col-xs-2  col-xs-offset-2 padding-r-no">
+						<input class="btn btn-block btn-primary rd-no" type="submit" value="提交" />
+					</div>
+				</div>
+
+			</form>
+		</div>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="css/bs-date/js/bootstrap-datetimepicker-ch.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--[if lte IE 8]>
+			<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			$(function() {
+
+				//设置iframe 高度
+				iframe.setHeight();
+
+				// bsdate
+				bsDate.init();
+				// 三级联动地址
+				threeAddress.init();
+
+			});
+		</script>
+	</body>
+
+</html>

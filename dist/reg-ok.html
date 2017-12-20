@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>注册成功</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+	</head>
+
+	<body class="bg-white" data-spy="scroll" data-target=".huati">
+		<!-- header -->
+		<header>
+
+			<!--logo-->
+			<div class="reg-logo ">
+				<div class="container-12">
+					<div class="clearfix">
+						<!--logo-->
+						<div class="logo-l pull-left">
+							<img src="" alt="LOGO 120*100" />
+						</div>
+
+						<div class="logo-r pull-right">
+							<p>
+								<span>已有账号,</span>
+								<a href="login.html">登录</a>
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!--red line-->
+			<div class="header-topLine"></div>
+
+		</header>
+
+		<!--content-->
+		<section>
+			<div class="reg-ok">
+
+				<div class="container-12">
+
+					<div class="reg-ok-cont  clearfix">
+
+						<div class="pull-left l">
+							<span class="iconfont OK"></span>
+						</div>
+
+						<div class="pull-left text-left r">
+							<h5 class="">恭喜你注册成功</h5>
+							<span class="text-danger" id="settime">10</span>秒自动跳转
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+		<!--页脚 -->
+		<footer>
+
+			<div class="index-ft">
+
+				<div class="com-footer container-12">
+					<ul class="clearfix">
+						<li>
+							<a href="#">关于易企订</a>
+						</li>
+
+						<li>
+							<a href="#">交易平台</a>
+						</li>
+						<li>
+							<a href="#">易企订产品</a>
+						</li>
+						<li>
+							<a href="#">行业信息</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+					</ul>
+
+					<p class="text-center ">
+						<span>CopyRight</span>
+						<span>@2004-2020</span>
+						<span>易企订 yiqidin.com</span>
+						<span>所有版权</span>
+					</p>
+				</div>
+
+			</div>
+
+		</footer>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--[if lte IE 8]>
+			<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+		
+
+				$(function() {
+
+					var sum = parseInt(document.getElementById("settime").innerText.trim())||0;
+
+					setInterval(function() {
+
+						if(sum >= 0) {
+							sum = sum - 1;
+							if(sum >= 1) {
+								document.getElementById("settime").innerText = '0' + sum;
+
+							}
+							if(sum == 0) {
+								//页面跳转
+								window.location.assign("login.html");
+							}
+
+						}
+
+					}, 1000);
+
+				});
+	
+		</script>
+	</body>
+
+</html>

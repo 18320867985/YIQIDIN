@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/cstfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+	</head>
+
+	<body data-spy="scroll" data-target=".huati">
+		<!-- header -->
+		<header>
+
+			<!--logo-->
+			<div class="login-header ">
+				<div class="container-12">
+					<div class="clearfix">
+						<!--logo-->
+							<a href="index.html">
+								<img class="logo-img" src="" alt="LOGO 120*100" />
+							</a>
+							
+						
+
+					</div>
+				</div>
+			</div>
+
+		</header>
+
+		<!--content-->
+		<section class="login ">
+			<div class="relative">
+
+				<!--背景大图-->
+				<img class=" login-bgimg" src="images/logo-bg.png" alt=" 背景大图" />
+
+				<!--登陆框-->
+				<div class="container-12 login-box">
+					
+					<div class="login-box-cont login-form">
+						<h4>用户登录</h4>
+						<div class="form-group relative vd-box">
+							<input class="txt vd-item" type="text" name="userName" id="userName" value=""
+								 placeholder="输入用户名" autocomplete="off"
+								 vd-req vd-req-msg="用户名不能为空"
+								  />
+							<span class="iconfont user"></span>
+							
+						<!--错误信息-->	
+						<!--<span  class="vd-req">	</span>-->
+								
+						
+							
+						</div>
+
+						<div class="form-group relative vd-box">
+							<input class="txt  vd-item" type="password" name="pwd" placeholder="输入密码" autocomplete="off"
+								 vd-req vd-req-msg="密码不能为空" />
+							<span class="iconfont  mima"></span>
+							
+						<!--错误信息-->	
+							<!--<span  class="vd-req">	</span>-->
+						</div>
+	
+						<div class="alert alert-warning  error-msg rd-no v-hide">
+							用户名与密码匹配
+						</div>
+						
+						<div class="login-link clearfix">
+
+							<a class="pull-left text-info" href="reg.html">新用户注册</a>
+
+							<a class="pull-right text-777" href="javascript:;">忘记密码</a>
+						</div>
+
+						<input class="submit-btn btn   btn-block rd-no2 btn-lg vd-btn" type="button" value="登录" />
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!--页脚 -->
+		<footer>
+
+			<div class="index-ft">
+
+				<div class="com-footer container-12">
+					<ul class="clearfix">
+						<li>
+							<a href="#">关于易企订</a>
+						</li>
+
+						<li>
+							<a href="#">交易平台</a>
+						</li>
+						<li>
+							<a href="#">易企订产品</a>
+						</li>
+						<li>
+							<a href="#">行业信息</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+					</ul>
+
+					<p class="text-center ">
+						<span>CopyRight</span>
+						<span>@2004-2020</span>
+						<span>易企订 yiqidin.com</span>
+						<span>所有版权</span>
+					</p>
+				</div>
+
+			</div>
+
+		</footer>
+
+		<script src="js/config.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/all.js" type="text/javascript" charset="utf-8"></script>
+
+		<!--[if lte IE 8]>
+			<script src="js/ie8.js" type="text/javascript" charset="utf-8"></script>
+		<![endif]-->
+
+		<script type="text/javascript">
+			$(function() {
+
+				// 初始化验证对象
+				var vd1 = vd.create(".login-form ");
+				vd1.init();
+				$(".vd-btn").on("click", function() {
+
+					// 验证成功
+					vd1.isSuccess(function(obj) {
+						
+						vd1.disabled(this); //禁用
+						//vd1.enabled(this); //激活
+						$(this).val("登录中...");
+						//alert(JSON.stringify(obj));
+						
+						// 自定义检验  
+						var userName=obj.userName;
+						var pwd=obj.pwd;
+						
+						// 下面登陆演示的
+						$.get("json/admin.json",function(data){
+							
+							var bl=false;
+							for(var i=0;i<data.length;i++){
+								
+								if(userName===data[i].userName&&data[i].pwd===pwd){
+									
+									bl=true;
+									break;
+								}
+							}
+							
+							var $err_obj=$(".login-form .error-msg");
+							if(bl){
+								$err_obj.hide();
+								alert("登录成功");
+								
+								vd1.enabled(this); //激活
+								$(this).val("登录");
+								
+								
+							}else{
+								
+								$err_obj.hide().show("fade");
+								$err_obj.text("用户名与密码不匹配");
+								
+								vd1.enabled(this); //激活
+								$(this).val("登录");
+							}
+							
+						
+						}.bind(this));
+
+					}.bind(this), 
+					
+					// 错误
+					function(obj) {
+						obj.el.focus();
+						
+					});
+				});
+
+				// 点击 enter键
+				$(document).on("keyup",function(event){
+					
+					if(event.keyCode===13){
+						$(".login-form .vd-btn").trigger("click");
+					}
+				})
+			
+				
+			});
+		</script>
+	</body>
+
+</html>
