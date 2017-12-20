@@ -132,7 +132,7 @@ var iframe = function ($) {
 	return {
 		setHeight: _setHeight
 	};
-}(window.jQuery);
+}(window.jQuery || window.Zepto);
 
 /*
 					 滚动监听
@@ -366,7 +366,7 @@ var scroll = function ($) {
 		$(this).closest("dd").addClass("active");
 		var _src = $(this).attr("href");
 		$(".parent-window").attr("src", _src);
-
+		$(".parent-window").css("height", 0);
 		$('html,body').animate({
 			scrollTop: 0
 		}, 400);

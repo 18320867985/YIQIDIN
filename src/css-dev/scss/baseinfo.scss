@@ -1,38 +1,34 @@
-
 /**基本信息**/
-    
-.baseinfo{
-    
 
+.baseinfo {
+     .form-horizontal .form-group {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 // baseinfo-form
-.baseinfo-form{
-    margin-top: 30px;
-    padding-bottom:20px ;
+.baseinfo-form {
+    margin-top: 30px ;
+    padding-bottom:20px;
     
-    label{
+   
+    label {
         font-size: 14px;
     }
-    
-    .radio{
-     
-        label+label{
+    .radio {
+        label+label {
             margin-left: 15px;
         }
-        
-     
     }
-    .select-big{
-        
-           select{
+    .select-big {
+        select {
             padding-left: 3px;
             padding-right: 3px;
             line-height: 26px;
         }
     }
-    
-    .form-group+.form-group{
+    .form-group+.form-group {
         margin-top: 25px;
     }
 }

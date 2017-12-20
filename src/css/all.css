@@ -7823,7 +7823,7 @@ button.close {
 
 /*页脚标志图片*/
 .index-ft-band {
-  margin-top: 100px;
+  margin-top: 50px;
   padding-top: 50px;
   padding-bottom: 50px; }
   .index-ft-band .item {
@@ -8955,8 +8955,7 @@ img {
       border: 1px solid #de3032; }
 
 .distri-cont-r {
-  width: 980px;
-  min-height: 762px; }
+  width: 980px; }
 
 .distri-cont-r-info {
   min-height: 120px;
@@ -9294,6 +9293,10 @@ img {
     background: #e6e9ed; }
 
 /**基本信息**/
+.baseinfo .form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0; }
+
 .baseinfo-form {
   margin-top: 30px;
   padding-bottom: 20px; }
